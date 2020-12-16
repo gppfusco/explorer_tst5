@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <wsdl:types> 
+  <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus"> 
+   <xsd:complexType name="requestSDSTHH"> 
+    <xsd:sequence> 
+     <xsd:element name="flagsync" type="xsd:string" /> 
+     <xsd:element name="clientid" type="xsd:string" /> 
+     <xsd:element name="operator" type="xsd:string" /> 
+     <xsd:element name="execdate" type="xsd:string" /> 
+     <xsd:element name="priority" type="xsd:string" /> 
+     <xsd:element name="funcname" type="xsd:string" /> 
+     <xsd:element name="typesrvreq" type="xsd:string" /> 
+     <xsd:element name="account" type="xsd:string" /> 
+     <xsd:element name="flagset" type="xsd:string" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:complexType name="responseSDSTHH"> 
+    <xsd:sequence> 
+     <xsd:element name="result" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="descriptionerr" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="ndserr" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="transid" type="xsd:string" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:element name="opSDSTHH"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="requestSDSTHH" type="eb:requestSDSTHH" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+   <xsd:element name="opSDSTHHResponse"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="responseSDSTHH" type="eb:responseSDSTHH" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+  </xsd:schema> 
+ </wsdl:types> 
+ <wsdl:message name="opSDSTHHRequest"> 
+  <wsdl:part element="eb:opSDSTHH" name="parameters" /> 
+ </wsdl:message> 
+ <wsdl:message name="opSDSTHHResponse"> 
+  <wsdl:part element="eb:opSDSTHHResponse" name="parameters" /> 
+ </wsdl:message> 
+ <wsdl:portType name="WS_SCMS_EXECUTE_SDSTHHSoap"> 
+  <wsdl:operation name="opSDSTHH"> 
+   <wsdl:input message="eb:opSDSTHHRequest" name="opSDSTHHRequest" /> 
+   <wsdl:output message="eb:opSDSTHHResponse" name="opSDSTHHResponse" /> 
+  </wsdl:operation> 
+ </wsdl:portType> 
+ <wsdl:binding name="WS_SCMS_EXECUTE_SDSTHHSoap" type="eb:WS_SCMS_EXECUTE_SDSTHHSoap"> 
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" /> 
+  <wsdl:operation name="opSDSTHH"> 
+   <soap:operation soapAction="WS_SCMS_EXECUTE_SDSTHH/opSDSTHH" style="document" /> 
+   <wsdl:input name="opSDSTHHRequest"> 
+    <soap:body use="literal" /> 
+   </wsdl:input> 
+   <wsdl:output name="opSDSTHHResponse"> 
+    <soap:body use="literal" /> 
+   </wsdl:output> 
+  </wsdl:operation> 
+ </wsdl:binding> 
+ <wsdl:service name="WS_SCMS_EXECUTE_SDSTHH"> 
+  <wsdl:port binding="eb:WS_SCMS_EXECUTE_SDSTHHSoap" name="WS_SCMS_EXECUTE_SDSTHHSoap"> 
+   <soap:address location="http://wssvil.sky.it:19100/wsexistbus/ws_scms/WS_SCMS_EXECUTE_SDSTHH" /> 
+  </wsdl:port> 
+ </wsdl:service> 
+</wsdl:definitions>

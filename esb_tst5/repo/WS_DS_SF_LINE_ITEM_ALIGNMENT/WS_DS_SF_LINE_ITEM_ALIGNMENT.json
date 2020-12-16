@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_DS_SF_LINE_ITEM_ALIGNMENT",
+    "name" : "WS_DS_SF_LINE_ITEM_ALIGNMENT",
+    "remoteName" : "WS_DS_SF_LINE_ITEM_ALIGNMENT",
+    "localPath" : "esb_tst5\\repo\\WS_DS_SF_LINE_ITEM_ALIGNMENT",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_DS_SF_LINE_ITEM_ALIGNMENT?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

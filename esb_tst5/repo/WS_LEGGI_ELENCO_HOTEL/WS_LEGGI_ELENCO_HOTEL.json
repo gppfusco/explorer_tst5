@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_LEGGI_ELENCO_HOTEL",
+    "name" : "WS_LEGGI_ELENCO_HOTEL",
+    "remoteName" : "WS_LEGGI_ELENCO_HOTEL",
+    "localPath" : "esb_tst5\\repo\\WS_LEGGI_ELENCO_HOTEL",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_LEGGI_ELENCO_HOTEL?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

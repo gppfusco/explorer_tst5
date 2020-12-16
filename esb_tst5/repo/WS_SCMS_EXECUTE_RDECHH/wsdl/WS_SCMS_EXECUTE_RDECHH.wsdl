@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <wsdl:types> 
+  <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus"> 
+   <xsd:complexType name="requestRDECHH"> 
+    <xsd:sequence> 
+     <xsd:element name="flagsync" type="xsd:string" /> 
+     <xsd:element name="clientid" type="xsd:string" /> 
+     <xsd:element name="operator" type="xsd:string" /> 
+     <xsd:element name="execdate" type="xsd:string" /> 
+     <xsd:element name="priority" type="xsd:string" /> 
+     <xsd:element name="funcname" type="xsd:string" /> 
+     <xsd:element name="typesrvreq" type="xsd:string" /> 
+     <xsd:element name="account" type="xsd:string" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:complexType name="responseRDECHH"> 
+    <xsd:sequence> 
+     <xsd:element name="result" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="descriptionerr" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="ndserr" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="transid" type="xsd:string" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:element name="opRDECHH"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="requestRDECHH" type="eb:requestRDECHH" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+   <xsd:element name="opRDECHHResponse"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="responseRDECHH" type="eb:responseRDECHH" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+  </xsd:schema> 
+ </wsdl:types> 
+ <wsdl:message name="opRDECHHRequest"> 
+  <wsdl:part element="eb:opRDECHH" name="parameters" /> 
+ </wsdl:message> 
+ <wsdl:message name="opRDECHHResponse"> 
+  <wsdl:part element="eb:opRDECHHResponse" name="parameters" /> 
+ </wsdl:message> 
+ <wsdl:portType name="WS_SCMS_EXECUTE_RDECHHSoap"> 
+  <wsdl:operation name="opRDECHH"> 
+   <wsdl:input message="eb:opRDECHHRequest" name="opRDECHHRequest" /> 
+   <wsdl:output message="eb:opRDECHHResponse" name="opRDECHHResponse" /> 
+  </wsdl:operation> 
+ </wsdl:portType> 
+ <wsdl:binding name="WS_SCMS_EXECUTE_RDECHHSoap" type="eb:WS_SCMS_EXECUTE_RDECHHSoap"> 
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" /> 
+  <wsdl:operation name="opRDECHH"> 
+   <soap:operation soapAction="WS_SCMS_EXECUTE_RDECHH/opRDECHH" style="document" /> 
+   <wsdl:input name="opRDECHHRequest"> 
+    <soap:body use="literal" /> 
+   </wsdl:input> 
+   <wsdl:output name="opRDECHHResponse"> 
+    <soap:body use="literal" /> 
+   </wsdl:output> 
+  </wsdl:operation> 
+ </wsdl:binding> 
+ <wsdl:service name="WS_SCMS_EXECUTE_RDECHH"> 
+  <wsdl:port binding="eb:WS_SCMS_EXECUTE_RDECHHSoap" name="WS_SCMS_EXECUTE_RDECHHSoap"> 
+   <soap:address location="http://wssvil.sky.it:19100/wsexistbus/ws_scms/WS_SCMS_EXECUTE_RDECHH" /> 
+  </wsdl:port> 
+ </wsdl:service> 
+</wsdl:definitions>

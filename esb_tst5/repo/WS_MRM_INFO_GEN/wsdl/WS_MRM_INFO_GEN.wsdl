@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <wsdl:types> 
+  <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus"> 
+   <xsd:complexType name="FMLFieldType"> 
+    <xsd:sequence> 
+     <xsd:element maxOccurs="unbounded" name="valore"> 
+      <xsd:complexType> 
+       <xsd:simpleContent> 
+        <xsd:extension base="xsd:string"> 
+         <xsd:attribute name="occur" type="xsd:string" use="optional" /> 
+        </xsd:extension> 
+       </xsd:simpleContent> 
+      </xsd:complexType> 
+     </xsd:element> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:complexType name="FMLComplexOutput"> 
+    <xsd:sequence> 
+     <xsd:element minOccurs="0" name="CA_REQUESTED_BY" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="MRM_GENERAZIONE" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="CA_NUMERO_CARTA" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="CA_TIPO_SC" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="CA_NUMERO_CARTE" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="MRM_ACTIVATION_DATE" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="MRM_EXPIRED_DATE" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="MRM_AMOUNT" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="KN_VALUTA" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="MRM_GROUP_CODE" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="MRM_CARD_STATUS" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="MRM_CREATION_DATE" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="CA_OPERATORE" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="CA_DATA_APERTURA" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="CRM_IDENTIFIER" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="CRM_IDENTIFIER2" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="CA_OPERATORE_API" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="CA_VOUCHER_CARDTYPE" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="CA_ID_ESIG" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="CA_SC_CODE" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="CA_NUM_SC" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="CA_NUM_SC_API" type="eb:FMLFieldType" /> 
+     <xsd:element minOccurs="0" name="FS_ORDERNUMBER" type="eb:FMLFieldType" /> 
+     <xsd:element name="SRVZ_RET_CODE" type="eb:FMLFieldType" /> 
+     <xsd:element name="SRVZ_DESCRIZ_ESITO" type="eb:FMLFieldType" /> 
+     <xsd:element name="SRVZ_LOG_FILENAME" type="eb:FMLFieldType" /> 
+     <xsd:element name="SRVZ_ERROR_TYPE" type="eb:FMLFieldType" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:element name="OP_MRM"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="CA_OPERATORE" type="xsd:string" /> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="MRM_GENERAZIONE" type="xsd:string" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+   <xsd:element name="OP_MRMResponse"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="MRM_OUTPUT" type="eb:FMLComplexOutput" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+  </xsd:schema> 
+ </wsdl:types> 
+ <wsdl:message name="OP_MRMResponse"> 
+  <wsdl:part element="eb:OP_MRMResponse" name="parameters"></wsdl:part> 
+ </wsdl:message> 
+ <wsdl:message name="OP_MRMRequest"> 
+  <wsdl:part element="eb:OP_MRM" name="parameters"></wsdl:part> 
+ </wsdl:message>
+</wsdl:definitions>

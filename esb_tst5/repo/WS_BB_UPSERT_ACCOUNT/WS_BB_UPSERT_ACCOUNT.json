@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_BB_UPSERT_ACCOUNT",
+    "name" : "WS_BB_UPSERT_ACCOUNT",
+    "remoteName" : "WS_BB_UPSERT_ACCOUNT",
+    "localPath" : "esb_tst5\\repo\\WS_BB_UPSERT_ACCOUNT",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_BB_UPSERT_ACCOUNT?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

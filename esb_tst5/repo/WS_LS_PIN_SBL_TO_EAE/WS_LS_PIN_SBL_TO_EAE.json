@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_LS_PIN_SBL_TO_EAE",
+    "name" : "WS_LS_PIN_SBL_TO_EAE",
+    "remoteName" : "WS_LS_PIN_SBL_TO_EAE",
+    "localPath" : "esb_tst5\\repo\\WS_LS_PIN_SBL_TO_EAE",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_LS_PIN_SBL_TO_EAE?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

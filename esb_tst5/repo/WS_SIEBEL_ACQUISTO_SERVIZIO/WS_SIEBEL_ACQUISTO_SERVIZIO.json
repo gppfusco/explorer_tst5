@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_SIEBEL_ACQUISTO_SERVIZIO",
+    "name" : "WS_SIEBEL_ACQUISTO_SERVIZIO",
+    "remoteName" : "WS_SIEBEL_ACQUISTO_SERVIZIO",
+    "localPath" : "esb_tst5\\repo\\WS_SIEBEL_ACQUISTO_SERVIZIO",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_SIEBEL_ACQUISTO_SERVIZIO?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

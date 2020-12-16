@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_SF_MTFS_VALIDA_CC",
+    "name" : "WS_SF_MTFS_VALIDA_CC",
+    "remoteName" : "WS_SF_MTFS_VALIDA_CC",
+    "localPath" : "esb_tst5\\repo\\WS_SF_MTFS_VALIDA_CC",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_SF_MTFS_VALIDA_CC?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

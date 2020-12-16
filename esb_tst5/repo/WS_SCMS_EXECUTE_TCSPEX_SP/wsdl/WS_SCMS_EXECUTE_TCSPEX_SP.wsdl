@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <wsdl:types> 
+  <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus"> 
+   <xsd:complexType name="requestTCSPEX"> 
+    <xsd:sequence> 
+     <xsd:element name="flagsync" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="clientid" type="xsd:string" /> 
+     <xsd:element name="box" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="operator" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="execdate" type="xsd:string" /> 
+     <xsd:element name="idcaller" type="xsd:string" /> 
+     <xsd:element name="skypass" type="xsd:string" /> 
+     <xsd:element name="idrecharge" type="xsd:string" /> 
+     <xsd:element name="typesrvreq" type="xsd:string" /> 
+     <xsd:element name="skypassserial" type="xsd:string" /> 
+     <xsd:element name="skypassnumcell" type="xsd:string" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:complexType name="responseTCSPEX"> 
+    <xsd:sequence> 
+     <xsd:element name="result" type="xsd:string" /> 
+     <xsd:element name="descriptionerr" type="xsd:string" /> 
+     <xsd:element name="transid" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="ndserr" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="skypass" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="credit" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="recredit" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="tokenscredit" type="xsd:string" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:element name="opTCSPEX"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="requestTCSPEX" type="eb:requestTCSPEX" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+   <xsd:element name="opTCSPEXResponse"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="responseTCSPEX" type="eb:responseTCSPEX" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+  </xsd:schema> 
+ </wsdl:types> 
+ <wsdl:message name="opTCSPEXRequest"> 
+  <wsdl:part element="eb:opTCSPEX" name="parameters"></wsdl:part> 
+ </wsdl:message> 
+ <wsdl:message name="opTCSPEXResponse"> 
+  <wsdl:part element="eb:opTCSPEXResponse" name="parameters"></wsdl:part> 
+ </wsdl:message> 
+ <wsdl:portType name="WS_SCMS_EXECUTE_TCSPEX_SPSoap"> 
+  <wsdl:operation name="opTCSPEX"> 
+   <wsdl:input message="eb:opTCSPEXRequest" name="opTCSPEXRequest"></wsdl:input> 
+   <wsdl:output message="eb:opTCSPEXResponse" name="opTCSPEXResponse"></wsdl:output> 
+  </wsdl:operation> 
+ </wsdl:portType> 
+ <wsdl:binding name="WS_SCMS_EXECUTE_TCSPEX_SPSoap" type="eb:WS_SCMS_EXECUTE_TCSPEX_SPSoap"> 
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" /> 
+  <wsdl:operation name="opTCSPEX"> 
+   <soap:operation soapAction="WS_SCMS_EXECUTE_TCSPEX_SP/opTCSPEX" style="document" /> 
+   <wsdl:input name="opTCSPEXRequest"> 
+    <soap:body use="literal" /> 
+   </wsdl:input> 
+   <wsdl:output name="opTCSPEXResponse"> 
+    <soap:body use="literal" /> 
+   </wsdl:output> 
+  </wsdl:operation> 
+ </wsdl:binding> 
+ <wsdl:service name="WS_SCMS_EXECUTE_TCSPEX_SP"> 
+  <wsdl:port binding="eb:WS_SCMS_EXECUTE_TCSPEX_SPSoap" name="WS_SCMS_EXECUTE_TCSPEX_SPSoap"> 
+   <soap:address location="http://wssvil.sky.it:19100/wsexistbus/ws_scms/WS_SCMS_EXECUTE_TCSPEX_SP" /> 
+  </wsdl:port> 
+ </wsdl:service> 
+</wsdl:definitions>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <wsdl:types> 
+  <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus"> 
+   <xsd:complexType name="requestWL2SMC"> 
+    <xsd:sequence> 
+     <xsd:element name="flagsync" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="clientid" type="xsd:string" /> 
+     <xsd:element name="box" type="xsd:string" /> 
+     <xsd:element name="newsmartcard" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="operator" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="execdate" type="xsd:string" /> 
+     <xsd:element name="idcaller" type="xsd:string" /> 
+     <xsd:element name="typesrvreq" type="xsd:string" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:complexType name="responseWL2SMC"> 
+    <xsd:sequence> 
+     <xsd:element name="result" type="xsd:string" /> 
+     <xsd:element name="descriptionerr" type="xsd:string" /> 
+     <xsd:element name="transid" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="ndserr" type="xsd:string" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:element name="opWL2SMC"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="requestWL2SMC" type="eb:requestWL2SMC" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+   <xsd:element name="opWL2SMCResponse"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="responseWL2SMC" type="eb:responseWL2SMC" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+  </xsd:schema> 
+ </wsdl:types> 
+ <wsdl:message name="opWL2SMCResponse"> 
+  <wsdl:part element="eb:opWL2SMCResponse" name="parameters"></wsdl:part> 
+ </wsdl:message> 
+ <wsdl:message name="opWL2SMCRequest"> 
+  <wsdl:part element="eb:opWL2SMC" name="parameters"></wsdl:part> 
+ </wsdl:message> 
+ <wsdl:portType name="WS_SCMS_EXECUTE_WL2SMC_SPSoap"> 
+  <wsdl:operation name="opWL2SMC"> 
+   <wsdl:input message="eb:opWL2SMCRequest" name="opWL2SMCRequest"></wsdl:input> 
+   <wsdl:output message="eb:opWL2SMCResponse" name="opWL2SMCResponse"></wsdl:output> 
+  </wsdl:operation> 
+ </wsdl:portType> 
+ <wsdl:binding name="WS_SCMS_EXECUTE_WL2SMC_SPSoap" type="eb:WS_SCMS_EXECUTE_WL2SMC_SPSoap"> 
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" /> 
+  <wsdl:operation name="opWL2SMC"> 
+   <soap:operation soapAction="WS_SCMS_EXECUTE_WL2SMC_SP/opWL2SMC" style="document" /> 
+   <wsdl:input name="opWL2SMCRequest"> 
+    <soap:body use="literal" /> 
+   </wsdl:input> 
+   <wsdl:output name="opWL2SMCResponse"> 
+    <soap:body use="literal" /> 
+   </wsdl:output> 
+  </wsdl:operation> 
+ </wsdl:binding> 
+ <wsdl:service name="WS_SCMS_EXECUTE_WL2SMC_SP"> 
+  <wsdl:port binding="eb:WS_SCMS_EXECUTE_WL2SMC_SPSoap" name="WS_SCMS_EXECUTE_WL2SMC_SPSoap"> 
+   <soap:address location="http://wssvil.sky.it:19100/wsexistbus/ws_scms/WS_SCMS_EXECUTE_WL2SMC_SP" /> 
+  </wsdl:port> 
+ </wsdl:service> 
+</wsdl:definitions>

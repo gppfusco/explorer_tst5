@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_TRASF_CREDITO_SP2SMC",
+    "name" : "WS_TRASF_CREDITO_SP2SMC",
+    "remoteName" : "WS_TRASF_CREDITO_SP2SMC",
+    "localPath" : "esb_tst5\\repo\\WS_TRASF_CREDITO_SP2SMC",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_TRASF_CREDITO_SP2SMC?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

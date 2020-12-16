@@ -1,0 +1,21 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_PEGASUS_GET_ATTACHMENT",
+    "name" : "WS_PEGASUS_GET_ATTACHMENT",
+    "remoteName" : "WS_PEGASUS_GET_ATTACHMENT",
+    "localPath" : "esb_tst5\\repo\\WS_PEGASUS_GET_ATTACHMENT",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_PEGASUS_GET_ATTACHMENT?WSDL",
+      "xsdSchemas" : [ {
+        "xsdPath" : "xsdPegasus/SkyXSD_WS_PEGASUS_GET_ATTACHMENT.xsd",
+        "xsdNameSpace" : "http://www.reply.it/existbus"
+      } ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:eb="http://www.reply.it/existbus" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:java="http://www.reply.it/existbus" targetNamespace="http://www.reply.it/existbus" elementFormDefault="unqualified" attributeFormDefault="unqualified"> 
+ <xsd:complexType name="DocumentDataIn"> 
+  <xsd:sequence> 
+   <xsd:element name="IdPDA" type="eb:string_30" nillable="false" /> 
+   <xsd:element name="NumeroTelefonoImpianto" type="eb:string_40" nillable="false" minOccurs="0" /> 
+   <xsd:element name="NumeroFissoSecondario" type="eb:string_40" nillable="false" minOccurs="0" /> 
+   <xsd:element name="NumeroCellulare" type="eb:string_40" nillable="false" minOccurs="0" /> 
+   <xsd:element name="Fax" type="eb:string_40" nillable="false" minOccurs="0" /> 
+   <xsd:element name="EmailPrimariaCertifTI" type="eb:string_50" nillable="false" minOccurs="0" /> 
+   <xsd:element name="EmailSecondariaTI" type="eb:string_50" nillable="false" minOccurs="0" /> 
+   <xsd:element name="ConsensoScambioDatiBundle" type="eb:string_YN" nillable="false" /> 
+   <xsd:element name="ClienteTI" type="eb:string_YN" nillable="false" /> 
+   <xsd:element name="DichiaratoSky" type="eb:string_YN" nillable="false" /> 
+   <xsd:element name="SemaforoConnettivita" type="eb:string_SemaforoConnettivita" nillable="false" /> 
+   <xsd:element name="OffertaTI" type="eb:string_100" nillable="false" minOccurs="0" /> 
+   <xsd:element name="ScontoPromoAddOn" type="eb:string_100" nillable="false" minOccurs="0" /> 
+   <xsd:element name="IndirizzoSedeImpianto" type="java:IndirizzoSedeImpianto" nillable="false" /> 
+   <xsd:element name="DatiAnagraficiCliente" type="java:DatiAnagraficiCliente" nillable="false" /> 
+  </xsd:sequence> 
+ </xsd:complexType> 
+ <xsd:complexType name="IndirizzoSedeImpianto"> 
+  <xsd:sequence> 
+   <xsd:element name="Localita" type="eb:string_100" nillable="false" /> 
+   <xsd:element name="ParticellaToponomastica" type="eb:string_50" nillable="false" /> 
+   <xsd:element name="Indirizzo" type="eb:string_200" nillable="false" /> 
+   <xsd:element name="NumeroCivico" type="eb:string_30" nillable="false" minOccurs="0" /> 
+   <xsd:element name="Cap" type="eb:string_5" nillable="false" /> 
+   <xsd:element name="Provincia" type="eb:string_2" nillable="false" /> 
+  </xsd:sequence> 
+ </xsd:complexType> 
+ <xsd:complexType name="DatiAnagraficiCliente"> 
+  <xsd:sequence> 
+   <xsd:element name="Nome" type="eb:string_50" nillable="false" /> 
+   <xsd:element name="Cognome" type="eb:string_100" nillable="false" /> 
+   <xsd:element name="CodiceFiscale" type="eb:string_50" nillable="false" /> 
+   <xsd:element name="Sesso" type="eb:string_MF" nillable="false" /> 
+   <xsd:element name="DataNascita" type="eb:string_Date" nillable="false" /> 
+   <xsd:element name="ComuneNascita" type="eb:string_100" nillable="false" /> 
+   <xsd:element name="ProvinciaNascita" type="eb:string_2" nillable="false" /> 
+   <xsd:element name="TipoDocumento" type="eb:string_TipoDocumento" nillable="false" /> 
+   <xsd:element name="NumeroDocumento" type="eb:string_15" nillable="false" /> 
+   <xsd:element name="DataScadenzaDocumento" type="eb:string_Date" nillable="false" /> 
+  </xsd:sequence> 
+ </xsd:complexType> 
+ <xsd:complexType name="DocumentDataOut"> 
+  <xsd:sequence> 
+   <xsd:element name="IdPDA" type="eb:string_30" nillable="false" minOccurs="0" /> 
+   <xsd:element name="Vendibile" type="eb:string_YN" nillable="false" minOccurs="0" /> 
+   <xsd:element name="CausaleInvendibilità" type="eb:string_250" nillable="false" minOccurs="0" /> 
+   <xsd:element name="ClienteSky" type="eb:string_YN" nillable="false" minOccurs="0" /> 
+   <xsd:element name="CreazioneUlterioreContrattoSky" type="eb:string_YN" nillable="false" minOccurs="0" /> 
+   <xsd:element name="ContrattoCessatoUltimoMese" type="eb:string_YN" nillable="false" minOccurs="0" /> 
+   <xsd:element name="CondAbbCl2" type="eb:string_1000" nillable="false" minOccurs="0" /> 
+   <xsd:element name="ElencoContratti" nillable="false" minOccurs="0"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element name="Contratto" type="java:ContrattoType" nillable="false" minOccurs="0" maxOccurs="5" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+   <xsd:element name="CodiceEsito" type="eb:string_CodiceEsito" nillable="false" /> 
+   <xsd:element name="DescrizioneEsito" type="eb:string_255" nillable="false" minOccurs="0" /> 
+  </xsd:sequence> 
+ </xsd:complexType> 
+ <xsd:complexType name="ContrattoType"> 
+  <xsd:sequence> 
+   <xsd:element name="CodiceContratto" type="eb:string_30" nillable="false" minOccurs="0" /> 
+   <xsd:element name="StatoContratto" type="eb:string_StatoContratto" nillable="false" minOccurs="0" /> 
+   <xsd:element name="Piattaforma" type="eb:string_Piattaforma" nillable="false" minOccurs="0" /> 
+   <xsd:element name="ParticellaToponomastica" type="eb:string_50" nillable="false" minOccurs="0" /> 
+   <xsd:element name="Indirizzo" type="eb:string_200" nillable="false" minOccurs="0" /> 
+   <xsd:element name="Civico" type="eb:string_30" nillable="false" minOccurs="0" /> 
+   <xsd:element name="Comune" type="eb:string_100" nillable="false" minOccurs="0" /> 
+   <xsd:element name="CAP" type="eb:string_5" nillable="false" minOccurs="0" /> 
+   <xsd:element name="Provincia" type="eb:string_2" nillable="false" minOccurs="0" /> 
+  </xsd:sequence> 
+ </xsd:complexType> 
+ <xsd:element name="DocumentData" type="eb:DocumentDataOut" /> 
+ <xsd:element name="COMPLEX_OUTPUT" type="eb:DocumentDataOut" /> 
+ <xsd:element name="COMPLEX_INPUT" type="eb:DocumentDataIn" /> 
+ <xsd:simpleType name="string_2"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:minLength value="2" /> 
+   <xsd:maxLength value="2" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_5"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:minLength value="1" /> 
+   <xsd:maxLength value="5" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_10"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:minLength value="1" /> 
+   <xsd:maxLength value="10" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_15"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:minLength value="1" /> 
+   <xsd:maxLength value="15" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_30"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:minLength value="1" /> 
+   <xsd:maxLength value="30" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_40"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:minLength value="1" /> 
+   <xsd:maxLength value="40" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_50"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:minLength value="1" /> 
+   <xsd:maxLength value="50" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_100"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:minLength value="1" /> 
+   <xsd:maxLength value="100" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_200"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:minLength value="1" /> 
+   <xsd:maxLength value="200" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_250"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:minLength value="1" /> 
+   <xsd:maxLength value="250" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_1000"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:minLength value="1" /> 
+   <xsd:maxLength value="1000" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_255"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:minLength value="1" /> 
+   <xsd:maxLength value="255" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_CodiceEsito"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:enumeration value="0" /> 
+   <xsd:enumeration value="1" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_YN"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:enumeration value="Y" /> 
+   <xsd:enumeration value="N" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_MF"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:enumeration value="M" /> 
+   <xsd:enumeration value="F" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_Stato"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:enumeration value="Aperta" /> 
+   <xsd:enumeration value="Chiusa" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_Piattaforma"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:enumeration value="DTH" /> 
+   <xsd:enumeration value="OLD IPTV TI" /> 
+   <xsd:enumeration value="IPTV TI" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_StatoContratto"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:enumeration value="ATTIVO" /> 
+   <xsd:enumeration value="CESSATO" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_TipoDocumento"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:enumeration value="Carta Identità" /> 
+   <xsd:enumeration value="Patente di Guida" /> 
+   <xsd:enumeration value="Passaporto" /> 
+   <xsd:enumeration value="Altro" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_SemaforoConnettivita"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:enumeration value="Alto" /> 
+   <xsd:enumeration value="Medio" /> 
+   <xsd:enumeration value="Basso" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_Date"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:pattern value="\d{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+</xsd:schema>

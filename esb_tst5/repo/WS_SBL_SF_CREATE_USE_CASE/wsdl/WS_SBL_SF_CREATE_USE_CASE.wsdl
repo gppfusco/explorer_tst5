@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <wsdl:types> 
+  <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus"> 
+   <xsd:import namespace="urn:sobject.enterprise.soap.sforce.com" schemaLocation="xsdSF/SkyXSD_WS_SBL_SF_CREATE_USE_CASE.xsd" /> 
+   <xsd:complexType name="createMDW" xmlns:sf="urn:sobject.enterprise.soap.sforce.com"> 
+    <xsd:complexContent> 
+     <xsd:extension base="sf:create" /> 
+    </xsd:complexContent> 
+   </xsd:complexType> 
+   <xsd:complexType name="createResponseMDW" xmlns:sf="urn:sobject.enterprise.soap.sforce.com"> 
+    <xsd:complexContent> 
+     <xsd:extension base="sf:createResponse" /> 
+    </xsd:complexContent> 
+   </xsd:complexType> 
+   <xsd:element name="opCreateUseCase"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="create" type="eb:createMDW" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+   <xsd:element name="opCreateUseCaseResponse"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="createResponse" type="eb:createResponseMDW" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+  </xsd:schema> 
+ </wsdl:types> 
+ <wsdl:message name="opCreateUseCaseRequest"> 
+  <wsdl:part element="eb:opCreateUseCase" name="parameters" /> 
+ </wsdl:message> 
+ <wsdl:message name="opCreateUseCaseResponse"> 
+  <wsdl:part element="eb:opCreateUseCaseResponse" name="parameters" /> 
+ </wsdl:message> 
+ <wsdl:portType name="WS_SBL_SF_CREATE_USE_CASESoap"> 
+  <wsdl:operation name="opCreateUseCase"> 
+   <wsdl:input message="eb:opCreateUseCaseRequest" name="opCreateUseCaseRequest" /> 
+   <wsdl:output message="eb:opCreateUseCaseResponse" name="opCreateUseCaseResponse" /> 
+  </wsdl:operation> 
+ </wsdl:portType> 
+ <wsdl:binding name="WS_SBL_SF_CREATE_USE_CASESoap" type="eb:WS_SBL_SF_CREATE_USE_CASESoap"> 
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" /> 
+  <wsdl:operation name="opCreateUseCase"> 
+   <soap:operation soapAction="WS_SBL_SF_CREATE_USE_CASE/opCreateUseCase" style="document" /> 
+   <wsdl:input name="opCreateUseCaseRequest"> 
+    <soap:body use="literal" /> 
+   </wsdl:input> 
+   <wsdl:output name="opCreateUseCaseResponse"> 
+    <soap:body use="literal" /> 
+   </wsdl:output> 
+  </wsdl:operation> 
+ </wsdl:binding> 
+ <wsdl:service name="WS_SBL_SF_CREATE_USE_CASE"> 
+  <wsdl:port binding="eb:WS_SBL_SF_CREATE_USE_CASESoap" name="WS_SBL_SF_CREATE_USE_CASESoap"> 
+   <soap:address location="http://CAMBIAMI-PRJ:19100/wsexistbus/openws/WS_SBL_SF_CREATE_USE_CASE" /> 
+  </wsdl:port> 
+ </wsdl:service> 
+</wsdl:definitions>

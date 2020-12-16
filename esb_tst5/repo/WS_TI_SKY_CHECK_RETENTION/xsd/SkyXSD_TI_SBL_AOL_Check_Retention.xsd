@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:eb="http://www.reply.it/existbus" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:java="http://www.reply.it/existbus" targetNamespace="http://www.reply.it/existbus" elementFormDefault="unqualified" attributeFormDefault="unqualified"> 
+ <xsd:complexType name="DocumentDataIn"> 
+  <xsd:sequence> 
+   <xsd:element name="IdPDA" type="eb:string_30" nillable="false" /> 
+   <xsd:element name="CodiceContrattoSky" type="eb:string_30" nillable="false" minOccurs="0" /> 
+  </xsd:sequence> 
+ </xsd:complexType> 
+ <xsd:complexType name="DocumentDataOut"> 
+  <xsd:sequence> 
+   <xsd:element name="IdPDA" type="eb:string_30" nillable="false" minOccurs="0" /> 
+   <xsd:element name="Eleggibile" type="eb:string_YN" nillable="false" minOccurs="0" /> 
+   <xsd:element name="CausaleNonEleggibilita" type="eb:string_250" nillable="false" minOccurs="0" /> 
+   <xsd:element name="CodiceEsito" type="eb:string_CodiceEsito" nillable="false" /> 
+   <xsd:element name="DescrizioneEsito" type="eb:string_255" nillable="false" minOccurs="0" /> 
+  </xsd:sequence> 
+ </xsd:complexType> 
+ <xsd:element name="DocumentData" type="eb:DocumentDataOut" /> 
+ <xsd:element name="COMPLEX_OUTPUT" type="eb:DocumentDataOut" /> 
+ <xsd:element name="COMPLEX_INPUT" type="eb:DocumentDataIn" /> 
+ <xsd:simpleType name="string_30"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:minLength value="1" /> 
+   <xsd:maxLength value="30" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_250"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:minLength value="1" /> 
+   <xsd:maxLength value="250" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_255"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:minLength value="1" /> 
+   <xsd:maxLength value="255" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_CodiceEsito"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:enumeration value="0" /> 
+   <xsd:enumeration value="1" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_YN"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:enumeration value="Y" /> 
+   <xsd:enumeration value="N" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+</xsd:schema>

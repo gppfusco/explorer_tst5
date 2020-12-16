@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_SCMS_DELETE_USERS",
+    "name" : "WS_SCMS_DELETE_USERS",
+    "remoteName" : "WS_SCMS_DELETE_USERS",
+    "localPath" : "esb_tst5\\repo\\WS_SCMS_DELETE_USERS",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_SCMS_DELETE_USERS?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

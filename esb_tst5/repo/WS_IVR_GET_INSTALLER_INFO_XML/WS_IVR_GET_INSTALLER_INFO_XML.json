@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_IVR_GET_INSTALLER_INFO_XML",
+    "name" : "WS_IVR_GET_INSTALLER_INFO_XML",
+    "remoteName" : "WS_IVR_GET_INSTALLER_INFO_XML",
+    "localPath" : "esb_tst5\\repo\\WS_IVR_GET_INSTALLER_INFO_XML",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_IVR_GET_INSTALLER_INFO_XML?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

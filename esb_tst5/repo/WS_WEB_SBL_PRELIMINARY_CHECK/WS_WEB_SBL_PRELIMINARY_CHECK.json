@@ -1,0 +1,21 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_WEB_SBL_PRELIMINARY_CHECK",
+    "name" : "WS_WEB_SBL_PRELIMINARY_CHECK",
+    "remoteName" : "WS_WEB_SBL_PRELIMINARY_CHECK",
+    "localPath" : "esb_tst5\\repo\\WS_WEB_SBL_PRELIMINARY_CHECK",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_WEB_SBL_PRELIMINARY_CHECK?WSDL",
+      "xsdSchemas" : [ {
+        "xsdPath" : "Web/SkyXSD_WS_WEB_SBL_PRELIMINARY_CHECK.xsd",
+        "xsdNameSpace" : "http://www.reply.it/existbus"
+      } ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

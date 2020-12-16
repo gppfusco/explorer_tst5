@@ -1,0 +1,21 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_WSC_TRACCIAMENTO_CAMPAGNA",
+    "name" : "WS_WSC_TRACCIAMENTO_CAMPAGNA",
+    "remoteName" : "WS_WSC_TRACCIAMENTO_CAMPAGNA",
+    "localPath" : "esb_tst5\\repo\\WS_WSC_TRACCIAMENTO_CAMPAGNA",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_WSC_TRACCIAMENTO_CAMPAGNA?WSDL",
+      "xsdSchemas" : [ {
+        "xsdPath" : "SkyXSD_WS_WSC_TRACCIAMENTO_CAMPAGNA.xsd",
+        "xsdNameSpace" : "http://www.reply.it/existbus"
+      } ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

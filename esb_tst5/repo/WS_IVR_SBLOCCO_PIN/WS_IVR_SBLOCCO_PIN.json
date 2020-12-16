@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_IVR_SBLOCCO_PIN",
+    "name" : "WS_IVR_SBLOCCO_PIN",
+    "remoteName" : "WS_IVR_SBLOCCO_PIN",
+    "localPath" : "esb_tst5\\repo\\WS_IVR_SBLOCCO_PIN",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_IVR_SBLOCCO_PIN?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

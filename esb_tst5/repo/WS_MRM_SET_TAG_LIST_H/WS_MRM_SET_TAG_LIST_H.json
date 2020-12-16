@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_MRM_SET_TAG_LIST_H",
+    "name" : "WS_MRM_SET_TAG_LIST_H",
+    "remoteName" : "WS_MRM_SET_TAG_LIST_H",
+    "localPath" : "esb_tst5\\repo\\WS_MRM_SET_TAG_LIST_H",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_MRM_SET_TAG_LIST_H?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

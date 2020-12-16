@@ -1,0 +1,21 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_PEGASUS_GET_LANDING_PAGE",
+    "name" : "WS_PEGASUS_GET_LANDING_PAGE",
+    "remoteName" : "WS_PEGASUS_GET_LANDING_PAGE",
+    "localPath" : "esb_tst5\\repo\\WS_PEGASUS_GET_LANDING_PAGE",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_PEGASUS_GET_LANDING_PAGE?WSDL",
+      "xsdSchemas" : [ {
+        "xsdPath" : "xsdSiebel/xsdPegasus/SkyXSD_WS_PEGASUS_GET_LANDING_PAGE.xsd",
+        "xsdNameSpace" : "http://www.reply.it/existbus"
+      } ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

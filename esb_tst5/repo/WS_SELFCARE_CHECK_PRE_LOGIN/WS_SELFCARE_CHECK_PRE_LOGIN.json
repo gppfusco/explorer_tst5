@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_SELFCARE_CHECK_PRE_LOGIN",
+    "name" : "WS_SELFCARE_CHECK_PRE_LOGIN",
+    "remoteName" : "WS_SELFCARE_CHECK_PRE_LOGIN",
+    "localPath" : "esb_tst5\\repo\\WS_SELFCARE_CHECK_PRE_LOGIN",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_SELFCARE_CHECK_PRE_LOGIN?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

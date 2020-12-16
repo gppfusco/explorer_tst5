@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_SBL_KBP_LETTERA_PO",
+    "name" : "WS_SBL_KBP_LETTERA_PO",
+    "remoteName" : "WS_SBL_KBP_LETTERA_PO",
+    "localPath" : "esb_tst5\\repo\\WS_SBL_KBP_LETTERA_PO",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_SBL_KBP_LETTERA_PO?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

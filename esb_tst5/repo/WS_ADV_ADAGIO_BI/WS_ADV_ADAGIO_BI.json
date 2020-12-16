@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_ADV_ADAGIO_BI",
+    "name" : "WS_ADV_ADAGIO_BI",
+    "remoteName" : "WS_ADV_ADAGIO_BI",
+    "localPath" : "esb_tst5\\repo\\WS_ADV_ADAGIO_BI",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_ADV_ADAGIO_BI?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

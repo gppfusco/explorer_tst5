@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_MOODLE_CHP_AUTHENTICATION_SERVICE",
+    "name" : "WS_MOODLE_CHP_AUTHENTICATION_SERVICE",
+    "remoteName" : "WS_MOODLE_CHP_AUTHENTICATION_SERVICE",
+    "localPath" : "esb_tst5\\repo\\WS_MOODLE_CHP_AUTHENTICATION_SERVICE",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_MOODLE_CHP_AUTHENTICATION_SERVICE?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

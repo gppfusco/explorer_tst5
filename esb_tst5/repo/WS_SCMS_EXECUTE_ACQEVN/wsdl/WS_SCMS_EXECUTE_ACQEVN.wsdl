@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <wsdl:types> 
+  <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus"> 
+   <xsd:complexType name="requestACQEVN"> 
+    <xsd:sequence> 
+     <xsd:element name="box" type="xsd:string" /> 
+     <xsd:element name="refid" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="ppv_pin" type="xsd:string" /> 
+     <xsd:element name="eventtrasmdate" type="xsd:string" /> 
+     <xsd:element name="idcaller" type="xsd:string" /> 
+     <xsd:element name="typesrvreq" type="xsd:string" /> 
+     <xsd:element name="clientid" type="xsd:string" /> 
+     <xsd:element name="operator" type="xsd:string" /> 
+     <xsd:element name="flagsync" type="xsd:string" /> 
+     <xsd:element name="purchasedate" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="execdate" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="pickemixcode" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="priority" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="telephonenumber" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="service" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="version" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="devicetype" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="os" type="xsd:string" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:complexType name="responseACQEVN"> 
+    <xsd:sequence> 
+     <xsd:element name="title" type="xsd:string" /> 
+     <xsd:element name="result" type="xsd:string" /> 
+     <xsd:element name="ndserr" type="xsd:string" /> 
+     <xsd:element name="transid" type="xsd:string" /> 
+     <xsd:element name="typesmc" type="xsd:string" /> 
+     <xsd:element name="paytype" type="xsd:string" /> 
+     <xsd:element name="ppv_pin" type="xsd:string" /> 
+     <xsd:element name="flaglive" type="xsd:string" /> 
+     <xsd:element name="typeevent" type="xsd:string" /> 
+     <xsd:element name="eventcost" type="xsd:string" /> 
+     <xsd:element name="promokind" type="xsd:string" /> 
+     <xsd:element name="descpromo" type="xsd:string" /> 
+     <xsd:element name="flagreqpin" type="xsd:string" /> 
+     <xsd:element name="servicecost" type="xsd:string" /> 
+     <xsd:element name="promodetails" type="xsd:string" /> 
+     <xsd:element name="promocatalogid" type="xsd:string" /> 
+     <xsd:element name="originalcost" type="xsd:string" /> 
+     <xsd:element name="is_adult_h24" type="xsd:string" /> 
+     <xsd:element name="descriptionerr" type="xsd:string" /> 
+     <xsd:element name="eventtrasmdate" type="xsd:string" /> 
+     <xsd:element name="targetaudience" type="xsd:string" /> 
+     <xsd:element name="subcontentcode" type="xsd:string" /> 
+     <xsd:any processContents="lax" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:element name="opACQEVN"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="requestACQEVN" type="eb:requestACQEVN" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+   <xsd:element name="opACQEVNResponse"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="responseACQEVN" type="eb:responseACQEVN" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+  </xsd:schema> 
+ </wsdl:types> 
+ <wsdl:message name="opACQEVNResponse"> 
+  <wsdl:part element="eb:opACQEVNResponse" name="parameters"></wsdl:part> 
+ </wsdl:message> 
+ <wsdl:message name="opACQEVNRequest"> 
+  <wsdl:part element="eb:opACQEVN" name="parameters"></wsdl:part> 
+ </wsdl:message> 
+ <wsdl:portType name="WS_SCMS_EXECUTE_ACQEVNSoap"> 
+  <wsdl:operation name="opACQEVN"> 
+  </wsdl:operation>
+ </wsdl:portType>
+</wsdl:definitions>

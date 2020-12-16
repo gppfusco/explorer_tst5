@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <wsdl:types> 
+  <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus"> 
+   <xsd:complexType name="requestVERSMC"> 
+    <xsd:sequence> 
+     <xsd:element name="box" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="clientid" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="execdate" type="xsd:string" /> 
+     <xsd:element name="flagsync" type="xsd:string" /> 
+     <xsd:element name="idcaller" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="operator" type="xsd:string" /> 
+     <xsd:element name="typesrvreq" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="extracheck" type="xsd:string" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:complexType name="responseVERSMC"> 
+    <xsd:sequence> 
+     <xsd:element name="result" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="ndserr" type="xsd:string" /> 
+     <xsd:element name="transid" type="xsd:string" /> 
+     <xsd:element name="descriptionerr" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="is_adult_h24" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="ppv_pin" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="scclosed" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="walletexists" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="ppv_pin_status" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="typesmc" type="xsd:string" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:element name="opVERSMC"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="requestVERSMC" type="eb:requestVERSMC" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+   <xsd:element name="opVERSMCResponse"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="responseVERSMC" type="eb:responseVERSMC" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+  </xsd:schema> 
+ </wsdl:types> 
+ <wsdl:message name="opVERSMCRequest"> 
+  <wsdl:part element="eb:opVERSMC" name="parameters"></wsdl:part> 
+ </wsdl:message> 
+ <wsdl:message name="opVERSMCResponse"> 
+  <wsdl:part element="eb:opVERSMCResponse" name="parameters"></wsdl:part> 
+ </wsdl:message> 
+ <wsdl:portType name="WS_SCMS_EXECUTE_VERSMC_SPSoap"> 
+  <wsdl:operation name="opVERSMC"> 
+   <wsdl:input message="eb:opVERSMCRequest" name="opVERSMCRequest"></wsdl:input> 
+   <wsdl:output message="eb:opVERSMCResponse" name="opVERSMCResponse"></wsdl:output> 
+  </wsdl:operation> 
+ </wsdl:portType> 
+ <wsdl:binding name="WS_SCMS_EXECUTE_VERSMC_SPSoap" type="eb:WS_SCMS_EXECUTE_VERSMC_SPSoap"> 
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" /> 
+  <wsdl:operation name="opVERSMC"> 
+   <soap:operation soapAction="WS_SCMS_EXECUTE_VERSMC_SP/opVERSMC" style="document" /> 
+   <wsdl:input name="opVERSMCRequest"> 
+    <soap:body use="literal" /> 
+   </wsdl:input> 
+   <wsdl:output name="opVERSMCResponse"> 
+    <soap:body use="literal" /> 
+   </wsdl:output> 
+  </wsdl:operation> 
+ </wsdl:binding> 
+ <wsdl:service name="WS_SCMS_EXECUTE_VERSMC_SP"> 
+  <wsdl:port binding="eb:WS_SCMS_EXECUTE_VERSMC_SPSoap" name="WS_SCMS_EXECUTE_VERSMC_SPSoap"> 
+   <soap:address location="http://wssvil.sky.it:19100/wsexistbus/ws_scms/WS_SCMS_EXECUTE_VERSMC_SP" /> 
+  </wsdl:port> 
+ </wsdl:service> 
+</wsdl:definitions>

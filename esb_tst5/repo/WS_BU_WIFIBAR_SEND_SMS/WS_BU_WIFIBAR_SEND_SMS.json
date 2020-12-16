@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_BU_WIFIBAR_SEND_SMS",
+    "name" : "WS_BU_WIFIBAR_SEND_SMS",
+    "remoteName" : "WS_BU_WIFIBAR_SEND_SMS",
+    "localPath" : "esb_tst5\\repo\\WS_BU_WIFIBAR_SEND_SMS",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_BU_WIFIBAR_SEND_SMS?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

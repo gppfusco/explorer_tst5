@@ -1,0 +1,21 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_ASSIST_SBL_TRACCIA_ESIGENZA",
+    "name" : "WS_ASSIST_SBL_TRACCIA_ESIGENZA",
+    "remoteName" : "WS_ASSIST_SBL_TRACCIA_ESIGENZA",
+    "localPath" : "esb_tst5\\repo\\WS_ASSIST_SBL_TRACCIA_ESIGENZA",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_ASSIST_SBL_TRACCIA_ESIGENZA?WSDL",
+      "xsdSchemas" : [ {
+        "xsdPath" : "xsdAssist/SkyXSD_WS_ASSIST_SBL_TRACCIA_ESIGENZA.xsd",
+        "xsdNameSpace" : "http://www.reply.it/existbus"
+      } ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

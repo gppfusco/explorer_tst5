@@ -1,0 +1,21 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_NOIXA_CHIUDI_ESIGENZA",
+    "name" : "WS_NOIXA_CHIUDI_ESIGENZA",
+    "remoteName" : "WS_NOIXA_CHIUDI_ESIGENZA",
+    "localPath" : "esb_tst5\\repo\\WS_NOIXA_CHIUDI_ESIGENZA",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_NOIXA_CHIUDI_ESIGENZA?WSDL",
+      "xsdSchemas" : [ {
+        "xsdPath" : "xsdNoixa/SkyXSD_WS_NOIXA_CHIUDI_ESIGENZA.xsd",
+        "xsdNameSpace" : "http://www.reply.it/existbus"
+      } ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

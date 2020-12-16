@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_SSO_CHK_UPDT_MAIL_USER",
+    "name" : "WS_SSO_CHK_UPDT_MAIL_USER",
+    "remoteName" : "WS_SSO_CHK_UPDT_MAIL_USER",
+    "localPath" : "esb_tst5\\repo\\WS_SSO_CHK_UPDT_MAIL_USER",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_SSO_CHK_UPDT_MAIL_USER?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:eb="http://www.reply.it/existbus" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:java="http://www.reply.it/existbus" targetNamespace="http://www.reply.it/existbus" elementFormDefault="unqualified" attributeFormDefault="unqualified"> 
+ <xsd:complexType name="DocumentDataIn"> 
+  <xsd:sequence> 
+   <xsd:element name="IdPDA" type="eb:stringMinLenght" nillable="false" /> 
+   <xsd:element name="StatoIniziale" type="eb:stringMinLenght" nillable="false" /> 
+   <xsd:element name="StatoFinale" type="eb:string_StatoFinale" nillable="false" /> 
+   <xsd:element name="Causale" type="eb:string_50" nillable="false" minOccurs="0" /> 
+  </xsd:sequence> 
+ </xsd:complexType> 
+ <xsd:complexType name="DocumentDataOut"> 
+  <xsd:sequence> 
+   <xsd:element name="CodiceEsito" type="eb:string_CodiceEsito" nillable="false" /> 
+   <xsd:element name="DescrizioneEsito" type="eb:string_255" nillable="false" minOccurs="0" /> 
+  </xsd:sequence> 
+ </xsd:complexType> 
+ <xsd:element name="DocumentData" type="eb:DocumentDataOut" /> 
+ <xsd:element name="COMPLEX_OUTPUT" type="eb:DocumentDataOut" /> 
+ <xsd:element name="COMPLEX_INPUT" type="eb:DocumentDataIn" /> 
+ <xsd:simpleType name="stringMinLenght"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:minLength value="1" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_50"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:minLength value="1" /> 
+   <xsd:maxLength value="50" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_255"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:minLength value="1" /> 
+   <xsd:maxLength value="255" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_CodiceEsito"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:enumeration value="0" /> 
+   <xsd:enumeration value="1" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+ <xsd:simpleType name="string_StatoFinale"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:enumeration value="Annullato" /> 
+   <xsd:enumeration value="Attivo" /> 
+   <xsd:enumeration value="Confermato" /> 
+   <xsd:enumeration value="Attivato" /> 
+   <xsd:enumeration value="Provisioning-Ordine Emesso" /> 
+   <xsd:enumeration value="Provisioning-Appuntamento Rimodulato" /> 
+   <xsd:enumeration value="Cessato" /> 
+   <xsd:enumeration value="Sospeso" /> 
+   <xsd:enumeration value="Provisioning-KO cliente intermedio" /> 
+   <xsd:enumeration value="Provisioning-KO Rete" /> 
+   <xsd:enumeration value="Provisioning-Richiesta Rimod. Appuntamento" /> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+</xsd:schema>

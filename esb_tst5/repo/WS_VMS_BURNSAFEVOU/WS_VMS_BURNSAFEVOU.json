@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_VMS_BURNSAFEVOU",
+    "name" : "WS_VMS_BURNSAFEVOU",
+    "remoteName" : "WS_VMS_BURNSAFEVOU",
+    "localPath" : "esb_tst5\\repo\\WS_VMS_BURNSAFEVOU",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_VMS_BURNSAFEVOU?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

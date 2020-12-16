@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <wsdl:types> 
+  <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus"> 
+   <xsd:complexType name="requestSETPAR"> 
+    <xsd:sequence> 
+     <xsd:element name="flagsync" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="clientid" type="xsd:string" /> 
+     <xsd:element name="box" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="stbkind" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="operator" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="execdate" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="priority" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="funcname" type="xsd:string" /> 
+     <xsd:element name="flagset" type="xsd:string" /> 
+     <xsd:element name="pincontrol" type="xsd:string" /> 
+     <xsd:element name="flaglock" type="xsd:string" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:complexType name="responseSETPAR"> 
+    <xsd:sequence> 
+     <xsd:element name="result" type="xsd:string" /> 
+     <xsd:element name="descriptionerr" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="ndserr" type="xsd:string" /> 
+     <xsd:element name="transid" type="xsd:string" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:element name="opSetpar"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="requestSETPAR" type="eb:requestSETPAR" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+   <xsd:element name="opSetparResponse"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="responseSETPAR" type="eb:responseSETPAR" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+  </xsd:schema> 
+ </wsdl:types> 
+ <wsdl:message name="opSetparResponse"> 
+  <wsdl:part element="eb:opSetparResponse" name="parameters"></wsdl:part> 
+ </wsdl:message> 
+ <wsdl:message name="opSetparRequest"> 
+  <wsdl:part element="eb:opSetpar" name="parameters"></wsdl:part> 
+ </wsdl:message> 
+ <wsdl:portType name="WS_SCMS_EXECUTE_SETPARSoap"> 
+  <wsdl:operation name="opSetpar"> 
+   <wsdl:input message="eb:opSetparRequest" name="opSetparRequest"></wsdl:input> 
+   <wsdl:output message="eb:opSetparResponse" name="opSetparResponse"></wsdl:output> 
+  </wsdl:operation> 
+ </wsdl:portType> 
+ <wsdl:binding name="WS_SCMS_EXECUTE_SETPARSoap" type="eb:WS_SCMS_EXECUTE_SETPARSoap"> 
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" /> 
+  <wsdl:operation name="opSetpar"> 
+   <soap:operation soapAction="WS_SCMS_EXECUTE_SETPAR/opSetpar" style="document" /> 
+   <wsdl:input name="opSetparRequest"> 
+    <soap:body use="literal" /> 
+   </wsdl:input> 
+   <wsdl:output name="opSetparResponse"> 
+    <soap:body use="literal" /> 
+   </wsdl:output> 
+  </wsdl:operation> 
+ </wsdl:binding> 
+ <wsdl:service name="WS_SCMS_EXECUTE_SETPAR"> 
+  <wsdl:port binding="eb:WS_SCMS_EXECUTE_SETPARSoap" name="WS_SCMS_EXECUTE_SETPARSoap"> 
+   <soap:address location="http://wssvil.sky.it:19100/wsexistbus/ws_scms/WS_SCMS_EXECUTE_SETPAR" /> 
+  </wsdl:port> 
+ </wsdl:service> 
+</wsdl:definitions>

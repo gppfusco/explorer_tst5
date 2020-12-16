@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <wsdl:types> 
+  <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus"> 
+   <xsd:complexType name="DocumentData"> 
+    <xsd:sequence> 
+     <xsd:element maxOccurs="unbounded" minOccurs="0" name="param" type="eb:param" /> 
+     <xsd:element maxOccurs="unbounded" minOccurs="0" name="record" type="eb:record" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:complexType name="param"> 
+    <xsd:attribute name="name" type="xsd:string" use="required" /> 
+    <xsd:attribute name="value" type="xsd:string" use="required" /> 
+   </xsd:complexType> 
+   <xsd:complexType name="record"> 
+    <xsd:sequence> 
+     <xsd:element maxOccurs="unbounded" minOccurs="0" name="param" type="eb:param" /> 
+     <xsd:element maxOccurs="unbounded" minOccurs="0" name="record" type="eb:record" /> 
+    </xsd:sequence> 
+    <xsd:attribute name="name" type="xsd:string" use="required" /> 
+    <xsd:attribute name="value" type="xsd:string" use="required" /> 
+   </xsd:complexType> 
+   <xsd:element name="opSBL"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="COMPLEX_INPUT" type="eb:DocumentData" /> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="WS_BS_NAME" type="xsd:string" /> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="WS_BS_METHOD_NAME" type="xsd:string" /> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="WS_BS_CHANNEL" type="xsd:string" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+   <xsd:element name="opSBLResponse"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="COMPLEX_OUTPUT" type="eb:DocumentData" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+  </xsd:schema> 
+ </wsdl:types> 
+ <wsdl:message name="opSBLRequest"> 
+  <wsdl:part element="eb:opSBL" name="parameters"></wsdl:part> 
+ </wsdl:message> 
+ <wsdl:message name="opSBLResponse"> 
+  <wsdl:part element="eb:opSBLResponse" name="parameters"></wsdl:part> 
+ </wsdl:message> 
+ <wsdl:portType name="WS_COLLAUDO_SIEBELSoap"> 
+  <wsdl:operation name="opSBL"> 
+   <wsdl:input message="eb:opSBLRequest" name="opSBLRequest"></wsdl:input> 
+   <wsdl:output message="eb:opSBLResponse" name="opSBLResponse"></wsdl:output> 
+  </wsdl:operation> 
+ </wsdl:portType> 
+ <wsdl:binding name="WS_COLLAUDO_SIEBELSoap" type="eb:WS_COLLAUDO_SIEBELSoap"> 
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" /> 
+  <wsdl:operation name="opSBL"> 
+   <soap:operation soapAction="WS_COLLAUDO_SIEBEL/opSBL" style="document" /> 
+   <wsdl:input name="opSBLRequest"> 
+    <soap:body use="literal" /> 
+   </wsdl:input> 
+   <wsdl:output name="opSBLResponse"> 
+    <soap:body use="literal" /> 
+   </wsdl:output> 
+  </wsdl:operation> 
+ </wsdl:binding> 
+ <wsdl:service name="WS_COLLAUDO_SIEBEL"> 
+  <wsdl:port binding="eb:WS_COLLAUDO_SIEBELSoap" name="WS_COLLAUDO_SIEBELSoap"> 
+   <soap:address location="http://CAMBIAMI-PRJ:19100/wsexistbus/openws/WS_COLLAUDO_SIEBEL" /> 
+  </wsdl:port> 
+ </wsdl:service> 
+</wsdl:definitions>

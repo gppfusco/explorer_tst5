@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_SMS_UPGRADE_CINEMA",
+    "name" : "WS_SMS_UPGRADE_CINEMA",
+    "remoteName" : "WS_SMS_UPGRADE_CINEMA",
+    "localPath" : "esb_tst5\\repo\\WS_SMS_UPGRADE_CINEMA",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_SMS_UPGRADE_CINEMA?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

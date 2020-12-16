@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_MRM_REMOVE_BRAND",
+    "name" : "WS_MRM_REMOVE_BRAND",
+    "remoteName" : "WS_MRM_REMOVE_BRAND",
+    "localPath" : "esb_tst5\\repo\\WS_MRM_REMOVE_BRAND",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_MRM_REMOVE_BRAND?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <wsdl:types> 
+  <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus"> 
+   <xsd:complexType name="requestUPFLPR"> 
+    <xsd:sequence> 
+     <xsd:element minOccurs="0" name="clientid" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="operator" type="xsd:string" /> 
+     <xsd:element name="flagsync" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="execdate" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="priority" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="customerid" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="account" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="auth_vod_stb" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="term_cond_vod_stb" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="term_cond_skygo" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="promo_new_tech" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="analisys_pref" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="promo_dm" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="cons_tel_list_bb" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="data_exchange_bb" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="cons_vod_other_dev" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="term_cond_skygotrial" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="prospect_priv_tel" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="prospect_priv_email" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="prospect_priv_sms" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="nav_tracking_flg" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="nav_cookie_flg" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="term_cond_kids_app" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="cons_kids_app" type="xsd:string" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:complexType name="responseUPFLPR"> 
+    <xsd:sequence> 
+     <xsd:element name="descriptionerr" type="xsd:string" /> 
+     <xsd:element name="result" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="ndserr" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="transid" type="xsd:string" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:element name="opUPFLPR"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="requestUPFLPR" type="eb:requestUPFLPR" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+   <xsd:element name="opUPFLPRResponse"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="responseUPFLPR" type="eb:responseUPFLPR" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+  </xsd:schema> 
+ </wsdl:types> 
+ <wsdl:message name="opUPFLPRRequest"> 
+  <wsdl:part element="eb:opUPFLPR" name="parameters" /> 
+ </wsdl:message> 
+ <wsdl:message name="opUPFLPRResponse"> 
+  <wsdl:part element="eb:opUPFLPRResponse" name="parameters" /> 
+ </wsdl:message> 
+ <wsdl:portType name="WS_SCMS_EXECUTE_UPFLPRSoap"> 
+  <wsdl:operation name="opUPFLPR"> 
+   <wsdl:input message="eb:opUPFLPRRequest" name="opUPFLPRRequest" /> 
+   <wsdl:output message="eb:opUPFLPRResponse" name="opUPFLPRResponse" /> 
+  </wsdl:operation> 
+ </wsdl:portType> 
+ <wsdl:binding name="WS_SCMS_EXECUTE_UPFLPRSoap" type="eb:WS_SCMS_EXECUTE_UPFLPRSoap"> 
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" /> 
+  <wsdl:operation name="opUPFLPR"> 
+   <soap:operation soapAction="WS_SCMS_EXECUTE_UPFLPR/opUPFLPR" style="document" /> 
+   <wsdl:input name="opUPFLPRRequest"> 
+    <soap:body use="literal" /> 
+   </wsdl:input> 
+   <wsdl:output name="opUPFLPRResponse"> 
+    <soap:body use="literal" /> 
+   </wsdl:output> 
+  </wsdl:operation> 
+ </wsdl:binding> 
+ <wsdl:service name="WS_SCMS_EXECUTE_UPFLPR"> 
+  <wsdl:port binding="eb:WS_SCMS_EXECUTE_UPFLPRSoap" name="WS_SCMS_EXECUTE_UPFLPRSoap"> 
+   <soap:address location="http://wssvil.sky.it:19100/wsexistbus/ws_scms/WS_SCMS_EXECUTE_UPFLPR" /> 
+  </wsdl:port> 
+ </wsdl:service> 
+</wsdl:definitions>

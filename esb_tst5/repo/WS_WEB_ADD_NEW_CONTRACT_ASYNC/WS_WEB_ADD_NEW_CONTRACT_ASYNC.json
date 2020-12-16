@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_WEB_ADD_NEW_CONTRACT_ASYNC",
+    "name" : "WS_WEB_ADD_NEW_CONTRACT_ASYNC",
+    "remoteName" : "WS_WEB_ADD_NEW_CONTRACT_ASYNC",
+    "localPath" : "esb_tst5\\repo\\WS_WEB_ADD_NEW_CONTRACT_ASYNC",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_WEB_ADD_NEW_CONTRACT_ASYNC?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

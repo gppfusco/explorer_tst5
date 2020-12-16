@@ -1,0 +1,21 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_SF_SBL_CHECK_BL_IDCARD",
+    "name" : "WS_SF_SBL_CHECK_BL_IDCARD",
+    "remoteName" : "WS_SF_SBL_CHECK_BL_IDCARD",
+    "localPath" : "esb_tst5\\repo\\WS_SF_SBL_CHECK_BL_IDCARD",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_SF_SBL_CHECK_BL_IDCARD?WSDL",
+      "xsdSchemas" : [ {
+        "xsdPath" : "xsdReitek/SkyXSD_OTS_SBL_CHECK_BL_IDCARD.xsd",
+        "xsdNameSpace" : "http://www.reply.it/existbus"
+      } ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

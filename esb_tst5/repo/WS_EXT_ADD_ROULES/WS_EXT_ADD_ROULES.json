@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_EXT_ADD_ROULES",
+    "name" : "WS_EXT_ADD_ROULES",
+    "remoteName" : "WS_EXT_ADD_ROULES",
+    "localPath" : "esb_tst5\\repo\\WS_EXT_ADD_ROULES",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_EXT_ADD_ROULES?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

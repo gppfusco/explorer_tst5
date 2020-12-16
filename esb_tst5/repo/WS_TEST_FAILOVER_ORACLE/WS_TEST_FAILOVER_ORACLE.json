@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_TEST_FAILOVER_ORACLE",
+    "name" : "WS_TEST_FAILOVER_ORACLE",
+    "remoteName" : "WS_TEST_FAILOVER_ORACLE",
+    "localPath" : "esb_tst5\\repo\\WS_TEST_FAILOVER_ORACLE",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_TEST_FAILOVER_ORACLE?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "GetAccinfo_AXIS2",
+    "name" : "GetAccinfo_AXIS2",
+    "remoteName" : "GetAccinfo_AXIS2",
+    "localPath" : "esb_tst5\\repo\\GetAccinfo_AXIS2",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/GetAccinfo_AXIS2?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

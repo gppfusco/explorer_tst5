@@ -1,0 +1,21 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_WSC_GESTIONE_SERVIZI_OPZIONALI",
+    "name" : "WS_WSC_GESTIONE_SERVIZI_OPZIONALI",
+    "remoteName" : "WS_WSC_GESTIONE_SERVIZI_OPZIONALI",
+    "localPath" : "esb_tst5\\repo\\WS_WSC_GESTIONE_SERVIZI_OPZIONALI",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_WSC_GESTIONE_SERVIZI_OPZIONALI?WSDL",
+      "xsdSchemas" : [ {
+        "xsdPath" : "SkyXSD_WS_WSC_GESTIONE_SERVIZI_OPZIONALI.xsd",
+        "xsdNameSpace" : "http://www.reply.it/existbus"
+      } ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

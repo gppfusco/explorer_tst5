@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="urn:authentication.soap.sforce.com" xmlns:sf="urn:authentication.soap.sforce.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <wsdl:types> 
+  <xsd:schema elementFormDefault="qualified" targetNamespace="urn:authentication.soap.sforce.com" xmlns:sf="urn:authentication.soap.sforce.com"> 
+   <xsd:complexType name="FMLComplexInput"> 
+    <xsd:sequence> 
+     <xsd:element name="CRM_BILLING_ACCOUNT" type="xsd:string" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:complexType name="FMLComplexOutput"> 
+    <xsd:sequence> 
+     <xsd:element name="SRVZ_RET_CODE" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="SRVZ_DESCRIZ_ESITO" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="CRM_IMPORTO" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="PY_X_IMPORTO_SCADUTO" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="CRM_RC_BASE" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="CA_FEE_COST" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="PY_X_IMPORTO_PENALE" type="xsd:string" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:element name="opGetBalance"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="request_ws" type="sf:FMLComplexInput" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+   <xsd:element name="opGetBalanceResponse"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="response_ws" type="sf:FMLComplexOutput" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+  </xsd:schema> 
+ </wsdl:types> 
+ <wsdl:message name="opGetBalanceRequest"> 
+  <wsdl:part element="sf:opGetBalance" name="parameters"></wsdl:part> 
+ </wsdl:message> 
+ <wsdl:message name="opGetBalanceResponse"> 
+  <wsdl:part element="sf:opGetBalanceResponse" name="parameters"></wsdl:part> 
+ </wsdl:message> 
+ <wsdl:portType name="WS_SBL_KBP_GET_BALANCE_TESTNSSoap"> 
+  <wsdl:operation name="opGetBalance"> 
+   <wsdl:input message="sf:opGetBalanceRequest" name="opGetBalanceRequest"></wsdl:input> 
+   <wsdl:output message="sf:opGetBalanceResponse" name="opGetBalanceResponse"></wsdl:output> 
+  </wsdl:operation> 
+ </wsdl:portType> 
+ <wsdl:binding name="WS_SBL_KBP_GET_BALANCE_TESTNSSoap" type="sf:WS_SBL_KBP_GET_BALANCE_TESTNSSoap"> 
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" /> 
+  <wsdl:operation name="opGetBalance"> 
+   <soap:operation soapAction="WS_SBL_KBP_GET_BALANCE_TESTNS/opGetBalance" style="document" /> 
+   <wsdl:input name="opGetBalanceRequest"> 
+    <soap:body use="literal" /> 
+   </wsdl:input> 
+   <wsdl:output name="opGetBalanceResponse"> 
+    <soap:body use="literal" /> 
+   </wsdl:output> 
+  </wsdl:operation> 
+ </wsdl:binding> 
+ <wsdl:service name="WS_SBL_KBP_GET_BALANCE_TESTNS"> 
+  <wsdl:port binding="sf:WS_SBL_KBP_GET_BALANCE_TESTNSSoap" name="WS_SBL_KBP_GET_BALANCE_TESTNSSoap"> 
+   <soap:address location="http://CAMBIAMI-PRJ:19100/wsexistbus/openws/WS_SBL_KBP_GET_BALANCE_TESTNS" /> 
+  </wsdl:port> 
+ </wsdl:service> 
+</wsdl:definitions>

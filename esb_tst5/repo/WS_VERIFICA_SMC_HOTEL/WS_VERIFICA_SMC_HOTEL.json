@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_VERIFICA_SMC_HOTEL",
+    "name" : "WS_VERIFICA_SMC_HOTEL",
+    "remoteName" : "WS_VERIFICA_SMC_HOTEL",
+    "localPath" : "esb_tst5\\repo\\WS_VERIFICA_SMC_HOTEL",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_VERIFICA_SMC_HOTEL?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

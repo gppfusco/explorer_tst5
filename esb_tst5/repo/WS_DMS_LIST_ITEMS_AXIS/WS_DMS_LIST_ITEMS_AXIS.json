@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_DMS_LIST_ITEMS_AXIS",
+    "name" : "WS_DMS_LIST_ITEMS_AXIS",
+    "remoteName" : "WS_DMS_LIST_ITEMS_AXIS",
+    "localPath" : "esb_tst5\\repo\\WS_DMS_LIST_ITEMS_AXIS",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_DMS_LIST_ITEMS_AXIS?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

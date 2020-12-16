@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_HTL_RECUPERO_FILTRI_MONITORIA",
+    "name" : "WS_HTL_RECUPERO_FILTRI_MONITORIA",
+    "remoteName" : "WS_HTL_RECUPERO_FILTRI_MONITORIA",
+    "localPath" : "esb_tst5\\repo\\WS_HTL_RECUPERO_FILTRI_MONITORIA",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_HTL_RECUPERO_FILTRI_MONITORIA?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

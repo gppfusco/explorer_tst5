@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <wsdl:types> 
+  <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus"> 
+   <xsd:element name="OP_CHECK_OUT"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="WS_CODICE_HOTEL" type="xsd:string" /> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="WS_CODICE_STANZA" type="xsd:string" /> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="WS_CODICE_UTENTE" type="xsd:string" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+   <xsd:element name="OP_CHECK_OUTResponse"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="WS_SRVZ_RET_CODE" type="xsd:string" /> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="WS_SRVZ_DESCRIZ_ESITO" type="xsd:string" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+  </xsd:schema> 
+ </wsdl:types> 
+ <wsdl:message name="OP_CHECK_OUTResponse"> 
+  <wsdl:part element="eb:OP_CHECK_OUTResponse" name="parameters"></wsdl:part> 
+ </wsdl:message> 
+ <wsdl:message name="OP_CHECK_OUTRequest"> 
+  <wsdl:part element="eb:OP_CHECK_OUT" name="parameters"></wsdl:part> 
+ </wsdl:message> 
+ <wsdl:portType name="WS_CHECK_OUTSoap"> 
+  <wsdl:operation name="OP_CHECK_OUT"> 
+   <wsdl:input message="eb:OP_CHECK_OUTRequest" name="OP_CHECK_OUTRequest"></wsdl:input> 
+   <wsdl:output message="eb:OP_CHECK_OUTResponse" name="OP_CHECK_OUTResponse"></wsdl:output> 
+  </wsdl:operation> 
+ </wsdl:portType> 
+ <wsdl:binding name="WS_CHECK_OUTSoap" type="eb:WS_CHECK_OUTSoap"> 
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" /> 
+  <wsdl:operation name="OP_CHECK_OUT"> 
+   <soap:operation soapAction="WS_CHECK_OUT/OP_CHECK_OUT" style="document" /> 
+   <wsdl:input name="OP_CHECK_OUTRequest"> 
+    <soap:body use="literal" /> 
+   </wsdl:input> 
+   <wsdl:output name="OP_CHECK_OUTResponse"> 
+    <soap:body use="literal" /> 
+   </wsdl:output> 
+  </wsdl:operation> 
+ </wsdl:binding> 
+ <wsdl:service name="WS_CHECK_OUT"> 
+  <wsdl:port binding="eb:WS_CHECK_OUTSoap" name="WS_CHECK_OUTSoap"> 
+   <soap:address location="http://CAMBIAMI-PRJ:19100/wsexistbus/openws/WS_CHECK_OUT" /> 
+  </wsdl:port> 
+ </wsdl:service> 
+</wsdl:definitions>

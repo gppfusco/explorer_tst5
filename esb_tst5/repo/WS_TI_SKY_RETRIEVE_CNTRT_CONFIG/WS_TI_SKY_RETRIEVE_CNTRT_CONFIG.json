@@ -1,0 +1,21 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_TI_SKY_RETRIEVE_CNTRT_CONFIG",
+    "name" : "WS_TI_SKY_RETRIEVE_CNTRT_CONFIG",
+    "remoteName" : "WS_TI_SKY_RETRIEVE_CNTRT_CONFIG",
+    "localPath" : "esb_tst5\\repo\\WS_TI_SKY_RETRIEVE_CNTRT_CONFIG",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_TI_SKY_RETRIEVE_CNTRT_CONFIG?WSDL",
+      "xsdSchemas" : [ {
+        "xsdPath" : "xsdTelecom/SkyXSD_TI_SBL_Retrieve_Cntrt_Config.xsd",
+        "xsdNameSpace" : "http://www.reply.it/existbus"
+      } ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

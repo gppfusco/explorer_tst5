@@ -1,0 +1,21 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_WSC2_MV_CONNECTED",
+    "name" : "WS_WSC2_MV_CONNECTED",
+    "remoteName" : "WS_WSC2_MV_CONNECTED",
+    "localPath" : "esb_tst5\\repo\\WS_WSC2_MV_CONNECTED",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_WSC2_MV_CONNECTED?WSDL",
+      "xsdSchemas" : [ {
+        "xsdPath" : "SkyXSD_WS_WSC2_MV_CONNECTED.xsd",
+        "xsdNameSpace" : "http://www.reply.it/existbus"
+      } ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

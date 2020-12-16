@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_IN_BB_ORDER_ENTRY_VALIDATION",
+    "name" : "WS_IN_BB_ORDER_ENTRY_VALIDATION",
+    "remoteName" : "WS_IN_BB_ORDER_ENTRY_VALIDATION",
+    "localPath" : "esb_tst5\\repo\\WS_IN_BB_ORDER_ENTRY_VALIDATION",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_IN_BB_ORDER_ENTRY_VALIDATION?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

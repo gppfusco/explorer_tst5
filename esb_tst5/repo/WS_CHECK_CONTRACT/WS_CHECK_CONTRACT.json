@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_CHECK_CONTRACT",
+    "name" : "WS_CHECK_CONTRACT",
+    "remoteName" : "WS_CHECK_CONTRACT",
+    "localPath" : "esb_tst5\\repo\\WS_CHECK_CONTRACT",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_CHECK_CONTRACT?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

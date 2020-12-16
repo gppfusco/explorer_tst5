@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_MRM_DB_VOU_GET_GEN",
+    "name" : "WS_MRM_DB_VOU_GET_GEN",
+    "remoteName" : "WS_MRM_DB_VOU_GET_GEN",
+    "localPath" : "esb_tst5\\repo\\WS_MRM_DB_VOU_GET_GEN",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_MRM_DB_VOU_GET_GEN?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

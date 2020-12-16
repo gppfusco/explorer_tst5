@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:eb="http://www.reply.it/existbus" targetNamespace="http://www.reply.it/existbus" elementFormDefault="qualified"> 
+ <xsd:element name="JsonResponse" type="eb:JsonResponseType" /> 
+ <xsd:complexType name="JsonRequestType"> 
+  <xsd:sequence> 
+   <xsd:element name="jsonInputParams"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element name="request_ts" type="xsd:string" /> 
+      <xsd:element name="source_type" type="xsd:string" /> 
+      <xsd:element name="crm_user" type="xsd:string" /> 
+      <xsd:element name="stb_matricola" type="xsd:string" /> 
+      <xsd:element name="date_start" type="xsd:string" /> 
+      <xsd:element name="date_end" type="xsd:string" /> 
+      <xsd:element name="required_info" type="xsd:string" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+  </xsd:sequence> 
+ </xsd:complexType> 
+ <xsd:complexType name="JsonResponseType"> 
+  <xsd:sequence> 
+   <xsd:element name="jsonOutputParams"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element name="msg_ts" type="xsd:string" /> 
+      <xsd:element name="result"> 
+       <xsd:complexType> 
+        <xsd:sequence> 
+         <xsd:element name="success" type="xsd:string" /> 
+         <xsd:element name="error_message" type="xsd:string" /> 
+        </xsd:sequence> 
+       </xsd:complexType> 
+      </xsd:element> 
+      <xsd:element name="event_list" minOccurs="0"> 
+       <xsd:complexType> 
+        <xsd:sequence> 
+         <xsd:element name="e" minOccurs="0" maxOccurs="unbounded"> 
+          <xsd:complexType> 
+           <xsd:sequence> 
+            <xsd:element name="ts" type="xsd:string" /> 
+            <xsd:element name="name" type="xsd:string" /> 
+            <xsd:element name="payload"> 
+             <xsd:complexType mixed="true"> 
+              <xsd:choice minOccurs="0"> 
+               <xsd:element name="code" type="xsd:string" /> 
+               <xsd:element name="disk_status" type="xsd:string" /> 
+               <xsd:sequence> 
+                <xsd:element name="stream_live"> 
+                 <xsd:complexType> 
+                  <xsd:sequence> 
+                   <xsd:element name="kpi" type="xsd:string" /> 
+                   <xsd:element name="info" type="xsd:string" /> 
+                  </xsd:sequence> 
+                 </xsd:complexType> 
+                </xsd:element> 
+                <xsd:element name="stream_rec"> 
+                 <xsd:complexType> 
+                  <xsd:sequence> 
+                   <xsd:element name="kpi" type="xsd:string" /> 
+                   <xsd:element name="info" type="xsd:string" /> 
+                  </xsd:sequence> 
+                 </xsd:complexType> 
+                </xsd:element> 
+                <xsd:element name="stream_vod"> 
+                 <xsd:complexType> 
+                  <xsd:sequence> 
+                   <xsd:element name="kpi" type="xsd:string" /> 
+                   <xsd:element name="info" type="xsd:string" /> 
+                  </xsd:sequence> 
+                 </xsd:complexType> 
+                </xsd:element> 
+                <xsd:element name="stato_hw" minOccurs="0"> 
+                 <xsd:complexType> 
+                  <xsd:sequence> 
+                   <xsd:element name="kpi" type="xsd:string" /> 
+                   <xsd:element name="info" type="xsd:string" /> 
+                  </xsd:sequence> 
+                 </xsd:complexType> 
+                </xsd:element> 
+                <xsd:element name="connectivity" type="xsd:string" /> 
+               </xsd:sequence> 
+               <xsd:sequence> 
+                <xsd:element name="status" type="xsd:string" /> 
+                <xsd:element name="ifethStatus" type="xsd:string" /> 
+                <xsd:element name="ifwifiStatus" type="xsd:string" /> 
+                <xsd:element name="wifiSsid" type="xsd:string" /> 
+                <xsd:element name="wifiSignalLevel" type="xsd:string" /> 
+                <xsd:element name="cpuUsage" type="xsd:string" /> 
+                <xsd:element name="memTotal" type="xsd:string" /> 
+                <xsd:element name="memFree" type="xsd:string" /> 
+                <xsd:element name="scStatus" type="xsd:string" /> 
+                <xsd:element name="ntpStatus" type="xsd:string" /> 
+                <xsd:element name="hdmi" type="xsd:string" /> 
+               </xsd:sequence> 
+               <xsd:sequence> 
+                <xsd:element name="sc_status" type="xsd:string" /> 
+                <xsd:element name="subscription" type="xsd:string" /> 
+                <xsd:element name="ti_service_auth" type="xsd:string" /> 
+               </xsd:sequence> 
+               <xsd:sequence> 
+                <xsd:element name="manufacturer" type="xsd:string" /> 
+                <xsd:element name="ui" type="xsd:string" /> 
+                <xsd:element name="hdmi" type="xsd:string" /> 
+                <xsd:element name="ethernet" type="xsd:string" /> 
+                <xsd:element name="linea_dati" type="xsd:string" /> 
+                <xsd:element name="codice_errore" type="xsd:string" /> 
+                <xsd:element name="smartcard" type="xsd:string" /> 
+               </xsd:sequence> 
+               <xsd:sequence> 
+                <xsd:element name="error_type" type="xsd:string" /> 
+                <xsd:element name="error_code" type="xsd:string" /> 
+               </xsd:sequence> 
+               <xsd:sequence> 
+                <xsd:element name="channel_number" type="xsd:string" /> 
+                <xsd:element name="status" type="xsd:string" /> 
+                <xsd:element name="quality" type="xsd:string" /> 
+                <xsd:element name="signal" type="xsd:string" /> 
+                <xsd:element name="evaluation" type="xsd:string" /> 
+               </xsd:sequence> 
+               <xsd:sequence> 
+                <xsd:element name="channel" type="xsd:string" /> 
+                <xsd:element name="bandwidth" type="xsd:string" /> 
+                <xsd:element name="evaluation_sd" type="xsd:string" /> 
+                <xsd:element name="evaluation_hd" type="xsd:string" /> 
+               </xsd:sequence> 
+               <xsd:sequence> 
+                <xsd:element name="band" type="xsd:string" /> 
+                <xsd:element name="channel" type="xsd:string" /> 
+                <xsd:element name="frequency" type="xsd:string" /> 
+                <xsd:element name="signal_strength" type="xsd:string" /> 
+                <xsd:element name="ber" type="xsd:string" /> 
+                <xsd:element name="lock" type="xsd:string" /> 
+                <xsd:element name="modulation_type" type="xsd:string" /> 
+                <xsd:element name="transmission_mode" type="xsd:string" /> 
+                <xsd:element name="guard_interval" type="xsd:string" /> 
+                <xsd:element name="fec" type="xsd:string" /> 
+               </xsd:sequence> 
+               <xsd:sequence> 
+                <xsd:element name="type" type="xsd:string" minOccurs="0" /> 
+                <xsd:element name="found_ch" minOccurs="0"> 
+                 <xsd:complexType> 
+                  <xsd:sequence> 
+                   <xsd:element name="e" type="xsd:string" minOccurs="0" maxOccurs="unbounded" /> 
+                  </xsd:sequence> 
+                 </xsd:complexType> 
+                </xsd:element> 
+                <xsd:element name="result"> 
+                 <xsd:complexType> 
+                  <xsd:sequence> 
+                   <xsd:element name="e" minOccurs="0" maxOccurs="unbounded"> 
+                    <xsd:complexType> 
+                     <xsd:sequence> 
+                      <xsd:element name="e" type="xsd:string" minOccurs="0" maxOccurs="unbounded" /> 
+                     </xsd:sequence> 
+                    </xsd:complexType> 
+                   </xsd:element> 
+                  </xsd:sequence> 
+                 </xsd:complexType> 
+                </xsd:element> 
+               </xsd:sequence> 
+              </xsd:choice> 
+             </xsd:complexType> 
+            </xsd:element> 
+           </xsd:sequence> 
+          </xsd:complexType> 
+         </xsd:element> 
+        </xsd:sequence> 
+       </xsd:complexType> 
+      </xsd:element> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+  </xsd:sequence> 
+ </xsd:complexType> 
+</xsd:schema>

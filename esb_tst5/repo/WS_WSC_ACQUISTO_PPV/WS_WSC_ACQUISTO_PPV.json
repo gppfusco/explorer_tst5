@@ -1,0 +1,21 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_WSC_ACQUISTO_PPV",
+    "name" : "WS_WSC_ACQUISTO_PPV",
+    "remoteName" : "WS_WSC_ACQUISTO_PPV",
+    "localPath" : "esb_tst5\\repo\\WS_WSC_ACQUISTO_PPV",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_WSC_ACQUISTO_PPV?WSDL",
+      "xsdSchemas" : [ {
+        "xsdPath" : "SkyXSD_WS_WSC_ACQUISTO_PPV.xsd",
+        "xsdNameSpace" : "http://www.reply.it/existbus"
+      } ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

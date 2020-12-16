@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <wsdl:types> 
+  <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.reply.it/existbus" xmlns:eb="http://www.reply.it/existbus"> 
+   <xsd:complexType name="requestVPREPO"> 
+    <xsd:sequence> 
+     <xsd:element name="flagsync" type="xsd:string" /> 
+     <xsd:element name="clientid" type="xsd:string" /> 
+     <xsd:element name="operator" type="xsd:string" /> 
+     <xsd:element name="execdate" type="xsd:string" /> 
+     <xsd:element name="priority" type="xsd:string" /> 
+     <xsd:element name="funcname" type="xsd:string" /> 
+     <xsd:element name="typesrvreq" type="xsd:string" /> 
+     <xsd:element name="account" type="xsd:string" /> 
+     <xsd:element name="startdate" type="xsd:string" /> 
+     <xsd:element name="enddate" type="xsd:string" /> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:complexType name="responseVPREPO"> 
+    <xsd:sequence> 
+     <xsd:element name="result" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="descriptionerr" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="ndserr" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="transid" type="xsd:string" /> 
+     <xsd:element minOccurs="0" name="proximity_report_list"> 
+      <xsd:complexType> 
+       <xsd:sequence> 
+        <xsd:element maxOccurs="unbounded" name="peer"> 
+         <xsd:complexType> 
+          <xsd:sequence> 
+           <xsd:element name="stb" type="xsd:string" /> 
+           <xsd:element name="date" type="xsd:string" /> 
+           <xsd:element name="esito" type="xsd:string" /> 
+          </xsd:sequence> 
+         </xsd:complexType> 
+        </xsd:element> 
+       </xsd:sequence> 
+      </xsd:complexType> 
+     </xsd:element> 
+    </xsd:sequence> 
+   </xsd:complexType> 
+   <xsd:element name="opVPREPO"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="requestVPREPO" type="eb:requestVPREPO" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+   <xsd:element name="opVPREPOResponse"> 
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element maxOccurs="1" minOccurs="1" name="responseVPREPO" type="eb:responseVPREPO" /> 
+     </xsd:sequence> 
+    </xsd:complexType> 
+   </xsd:element> 
+  </xsd:schema> 
+ </wsdl:types> 
+ <wsdl:message name="opVPREPORequest"> 
+  <wsdl:part element="eb:opVPREPO" name="parameters" /> 
+ </wsdl:message> 
+ <wsdl:message name="opVPREPOResponse"> 
+  <wsdl:part element="eb:opVPREPOResponse" name="parameters" /> 
+ </wsdl:message> 
+ <wsdl:portType name="WS_SCMS_EXECUTE_VPREPOSoap"> 
+  <wsdl:operation name="opVPREPO"> 
+   <wsdl:input message="eb:opVPREPORequest" name="opVPREPORequest" /> 
+   <wsdl:output message="eb:opVPREPOResponse" name="opVPREPOResponse" /> 
+  </wsdl:operation> 
+ </wsdl:portType> 
+ <wsdl:binding name="WS_SCMS_EXECUTE_VPREPOSoap" type="eb:WS_SCMS_EXECUTE_VPREPOSoap"> 
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" /> 
+  <wsdl:operation name="opVPREPO"> 
+   <soap:operation soapAction="WS_SCMS_EXECUTE_VPREPO/opVPREPO" style="document" /> 
+   <wsdl:input name="opVPREPORequest"> 
+    <soap:body use="literal" /> 
+   </wsdl:input> 
+   <wsdl:output name="opVPREPOResponse"> 
+    <soap:body use="literal" /> 
+   </wsdl:output> 
+  </wsdl:operation> 
+ </wsdl:binding> 
+ <wsdl:service name="WS_SCMS_EXECUTE_VPREPO"> 
+  <wsdl:port binding="eb:WS_SCMS_EXECUTE_VPREPOSoap" name="WS_SCMS_EXECUTE_VPREPOSoap"> 
+   <soap:address location="http://wssvil.sky.it:19100/wsexistbus/ws_scms/WS_SCMS_EXECUTE_VPREPO" /> 
+  </wsdl:port> 
+ </wsdl:service> 
+</wsdl:definitions>

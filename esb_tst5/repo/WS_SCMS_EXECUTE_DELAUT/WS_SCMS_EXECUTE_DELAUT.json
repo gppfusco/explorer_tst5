@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_SCMS_EXECUTE_DELAUT",
+    "name" : "WS_SCMS_EXECUTE_DELAUT",
+    "remoteName" : "WS_SCMS_EXECUTE_DELAUT",
+    "localPath" : "esb_tst5\\repo\\WS_SCMS_EXECUTE_DELAUT",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_SCMS_EXECUTE_DELAUT?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}

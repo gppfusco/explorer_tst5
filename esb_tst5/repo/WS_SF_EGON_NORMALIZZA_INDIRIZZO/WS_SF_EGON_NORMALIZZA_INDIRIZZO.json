@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "http://10.207.159.26:19100/wsexistbus/ws/",
+    "path" : "WS_SF_EGON_NORMALIZZA_INDIRIZZO",
+    "name" : "WS_SF_EGON_NORMALIZZA_INDIRIZZO",
+    "remoteName" : "WS_SF_EGON_NORMALIZZA_INDIRIZZO",
+    "localPath" : "esb_tst5\\repo\\WS_SF_EGON_NORMALIZZA_INDIRIZZO",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "http://10.207.159.26:19100/wsexistbus/ws/WS_SF_EGON_NORMALIZZA_INDIRIZZO?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "DATA_MANIPULATION",
+    "compressionSupported" : false,
+    "bufferingSupported" : false
+  }
+}
