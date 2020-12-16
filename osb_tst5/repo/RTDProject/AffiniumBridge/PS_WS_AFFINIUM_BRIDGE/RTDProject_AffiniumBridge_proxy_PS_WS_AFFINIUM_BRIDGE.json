@@ -1,0 +1,24 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "https://ws.osbcol.sky.it/osb05",
+    "path" : "/services/rtd/WS_AFFINIUM_BRIDGE",
+    "name" : "RTDProject_AffiniumBridge_proxy_PS_WS_AFFINIUM_BRIDGE",
+    "remoteName" : "ProxyService/RTDProject/AffiniumBridge/proxy/PS_WS_AFFINIUM_BRIDGE",
+    "localPath" : "osb_tst5\\repo\\RTDProject\\AffiniumBridge\\PS_WS_AFFINIUM_BRIDGE",
+    "authentication" : "http:HttpBasicAuthenticationType",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "https://ws.osbcol.sky.it/osb05/services/rtd/WS_AFFINIUM_BRIDGE?WSDL",
+      "xsdSchemas" : [ {
+        "xsdPath" : "/MDW_CDM/EnterpriseServices/RTDProject/AffiniumBridge/xsd/XSD_AFFINIUM_BRIDGE",
+        "xsdNameSpace" : "http://www.skytv.it/mdw/data"
+      }, {
+        "xsdPath" : "/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+        "xsdNameSpace" : "http://www.skytv.it/mdw/data"
+      } ]
+    },
+    "integrationScenario" : "NOT_DEFINED",
+    "bufferingSupported" : false,
+    "compressionSupported" : false
+  }
+}

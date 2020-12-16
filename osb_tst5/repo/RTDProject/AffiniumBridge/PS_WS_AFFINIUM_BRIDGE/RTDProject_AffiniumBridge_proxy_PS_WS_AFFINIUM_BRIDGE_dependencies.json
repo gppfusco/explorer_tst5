@@ -1,0 +1,107 @@
+{
+  "DefaultNetworkNode" : {
+    "label" : "ProxyService/RTDProject/AffiniumBridge/proxy/PS_WS_AFFINIUM_BRIDGE",
+    "properties" : {
+      "transport-type" : "http",
+      "nodeType" : "Proxy",
+      "service-type" : "SOAP"
+    },
+    "successors" : {
+      "WSDL/MDW_CDM/EnterpriseServices/RTDProject/AffiniumBridge/wsdl/WS_AFFINIUM_BRIDGE" : {
+        "label" : "WSDL/MDW_CDM/EnterpriseServices/RTDProject/AffiniumBridge/wsdl/WS_AFFINIUM_BRIDGE",
+        "properties" : {
+          "nodeType" : "WSDL"
+        },
+        "successors" : {
+          "XMLSchema/MDW_CDM/EnterpriseServices/RTDProject/AffiniumBridge/xsd/XSD_AFFINIUM_BRIDGE" : {
+            "label" : "XMLSchema/MDW_CDM/EnterpriseServices/RTDProject/AffiniumBridge/xsd/XSD_AFFINIUM_BRIDGE",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          },
+          "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY" : {
+            "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          }
+        }
+      },
+      "Pipeline/RTDProject/AffiniumBridge/pipeline/PL_WS_AFFINIUM_BRIDGE" : {
+        "label" : "Pipeline/RTDProject/AffiniumBridge/pipeline/PL_WS_AFFINIUM_BRIDGE",
+        "properties" : {
+          "nodeType" : "Pipeline"
+        },
+        "successors" : {
+          "PipelineTemplate/MDW_CO/templates/pipeline/PL_WS_GENERIC_OPERATION_TEMPLATE" : {
+            "label" : "PipelineTemplate/MDW_CO/templates/pipeline/PL_WS_GENERIC_OPERATION_TEMPLATE",
+            "properties" : {
+              "nodeType" : "PipelineTemplate"
+            },
+            "successors" : { }
+          },
+          "BusinessService/RTDProject/AffiniumBridge/businessService/BS_WS_AFFIUNIUM_BRIDGE" : {
+            "label" : "BusinessService/RTDProject/AffiniumBridge/businessService/BS_WS_AFFIUNIUM_BRIDGE",
+            "properties" : {
+              "nodeType" : "BusinessService"
+            },
+            "successors" : {
+              "ServiceAccount/MDW_CDM/ServiceAccount/SA_AffiniumBridge" : {
+                "label" : "ServiceAccount/MDW_CDM/ServiceAccount/SA_AffiniumBridge",
+                "properties" : {
+                  "nodeType" : "ServiceAccount"
+                },
+                "successors" : { }
+              },
+              "WSDL/MDW_CDM/ApplicationObjects/RTD/AffiniumBridge/AffiniumSiebelBridge" : {
+                "label" : "WSDL/MDW_CDM/ApplicationObjects/RTD/AffiniumBridge/AffiniumSiebelBridge",
+                "properties" : {
+                  "nodeType" : "WSDL"
+                },
+                "successors" : { }
+              }
+            }
+          },
+          "WSDL/MDW_CDM/EnterpriseServices/RTDProject/AffiniumBridge/wsdl/WS_AFFINIUM_BRIDGE" : {
+            "label" : "WSDL/MDW_CDM/EnterpriseServices/RTDProject/AffiniumBridge/wsdl/WS_AFFINIUM_BRIDGE",
+            "properties" : {
+              "nodeType" : "WSDL"
+            },
+            "successors" : {
+              "XMLSchema/MDW_CDM/EnterpriseServices/RTDProject/AffiniumBridge/xsd/XSD_AFFINIUM_BRIDGE" : {
+                "label" : "XMLSchema/MDW_CDM/EnterpriseServices/RTDProject/AffiniumBridge/xsd/XSD_AFFINIUM_BRIDGE",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              },
+              "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY" : {
+                "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              }
+            }
+          },
+          "Xquery/RTDProject/AffiniumBridge/transformations/createResponseAffiniumBridge" : {
+            "label" : "Xquery/RTDProject/AffiniumBridge/transformations/createResponseAffiniumBridge",
+            "properties" : {
+              "nodeType" : "Xquery"
+            },
+            "successors" : { }
+          },
+          "Xquery/RTDProject/AffiniumBridge/transformations/createRequestAffiniumBridge" : {
+            "label" : "Xquery/RTDProject/AffiniumBridge/transformations/createRequestAffiniumBridge",
+            "properties" : {
+              "nodeType" : "Xquery"
+            },
+            "successors" : { }
+          }
+        }
+      }
+    }
+  }
+}

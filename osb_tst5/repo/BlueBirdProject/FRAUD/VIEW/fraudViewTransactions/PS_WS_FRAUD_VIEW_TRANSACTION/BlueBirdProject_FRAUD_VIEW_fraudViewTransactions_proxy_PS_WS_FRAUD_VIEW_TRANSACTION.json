@@ -1,0 +1,24 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "https://ws.osbcol.sky.it/osb05",
+    "path" : "/services/mdw/FRAUD_VIEW/FRAUD_VIEW_TRANSACTIONS",
+    "name" : "BlueBirdProject_FRAUD_VIEW_fraudViewTransactions_proxy_PS_WS_FRAUD_VIEW_TRANSACTION",
+    "remoteName" : "ProxyService/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/proxy/PS_WS_FRAUD_VIEW_TRANSACTION",
+    "localPath" : "osb_tst5\\repo\\BlueBirdProject\\FRAUD\\VIEW\\fraudViewTransactions\\PS_WS_FRAUD_VIEW_TRANSACTION",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "https://ws.osbcol.sky.it/osb05/services/mdw/FRAUD_VIEW/FRAUD_VIEW_TRANSACTIONS?WSDL",
+      "xsdSchemas" : [ {
+        "xsdPath" : "/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+        "xsdNameSpace" : "http://www.skytv.it/mdw/data"
+      }, {
+        "xsdPath" : "/MDW_CDM/EnterpriseServices/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/xsd/XSD_FRAUD_VIEW_TRANSACTION",
+        "xsdNameSpace" : "http://www.skytv.it/mdw/data"
+      } ]
+    },
+    "integrationScenario" : "NOT_DEFINED",
+    "bufferingSupported" : false,
+    "compressionSupported" : false
+  }
+}

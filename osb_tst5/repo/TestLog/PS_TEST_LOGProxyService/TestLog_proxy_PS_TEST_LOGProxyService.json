@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "https://ws.osbcol.sky.it/osb05",
+    "path" : "/TestLog/PS_TEST_LOGProxyService",
+    "name" : "TestLog_proxy_PS_TEST_LOGProxyService",
+    "remoteName" : "ProxyService/TestLog/proxy/PS_TEST_LOGProxyService",
+    "localPath" : "osb_tst5\\repo\\TestLog\\PS_TEST_LOGProxyService",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "https://ws.osbcol.sky.it/osb05/TestLog/PS_TEST_LOGProxyService?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "NOT_DEFINED",
+    "bufferingSupported" : false,
+    "compressionSupported" : false
+  }
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skytv.it/mdw/internal"
+            targetNamespace="http://www.skytv.it/mdw/internal" elementFormDefault="qualified">
+  <xsd:element name="requestSlotPrioritization" type="requestSlotPrioritizationType"/>
+  <xsd:element name="responseSlotPrioritization" type="responseSlotPrioritizationType"/>
+  <xsd:element name="requestSlotReservation" type="requestSlotReservationType"/>
+  <xsd:element name="responseSlotReservation" type="responseSlotReservationType"/>
+  <xsd:complexType name="requestSlotPrioritizationType">
+    <xsd:sequence>
+      <xsd:element name="egonID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="startDate" type="xsd:string"/>
+      <xsd:element name="buildingID" type="xsd:string"/>
+      <xsd:element name="user" type="userType" minOccurs="1"/>
+      <xsd:element name="slots" type="slotType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="userType">
+    <xsd:sequence>
+      <xsd:element name="customer" type="xsd:string" minOccurs="1"/>
+      <xsd:element name="extra" type="xsd:string" minOccurs="1"/>
+      <xsd:element name="prospect" type="xsd:string" minOccurs="1"/>
+      <xsd:element name="tenure" type="xsd:string" minOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="slotType">
+    <xsd:sequence>
+      <xsd:element name="slotID" type="xsd:string" minOccurs="1"/>
+      <xsd:element name="type" type="xsd:string" minOccurs="1"/>
+      <xsd:element name="date" type="xsd:string" minOccurs="1"/>
+      <xsd:element name="time" type="xsd:string" minOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="responseSlotPrioritizationType">
+    <xsd:sequence>
+      <xsd:element name="message" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="slots" type="slotTypeResponse" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="slotTypeResponse">
+    <xsd:sequence>
+      <xsd:element name="slotID" type="xsd:string" minOccurs="1"/>
+      <xsd:element name="type" type="xsd:string" minOccurs="1"/>
+      <xsd:element name="date" type="xsd:string" minOccurs="1"/>
+      <xsd:element name="time" type="xsd:string" minOccurs="1"/>
+      <xsd:element name="priority" type="xsd:string" minOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="requestSlotReservationType">
+    <xsd:sequence>
+      <xsd:element name="slotID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="orderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="accessOrderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="type" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="date" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="time" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="egonID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="buildingID" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="responseSlotReservationType">
+    <xsd:sequence>
+      <xsd:element name="message" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="slotID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="orderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="accessOrderID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="type" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="date" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="time" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="egonID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="buildingID" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="status" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

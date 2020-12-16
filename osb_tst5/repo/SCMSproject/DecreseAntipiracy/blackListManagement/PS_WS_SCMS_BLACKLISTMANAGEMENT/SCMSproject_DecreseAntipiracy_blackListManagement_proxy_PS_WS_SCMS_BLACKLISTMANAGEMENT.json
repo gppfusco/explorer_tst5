@@ -1,0 +1,24 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "https://ws.osbcol.sky.it/osb05",
+    "path" : "/services/scms/blacklist/WS_SCMS_blacklistManagement",
+    "name" : "SCMSproject_DecreseAntipiracy_blackListManagement_proxy_PS_WS_SCMS_BLACKLISTMANAGEMENT",
+    "remoteName" : "ProxyService/SCMSproject/DecreseAntipiracy/blackListManagement/proxy/PS_WS_SCMS_BLACKLISTMANAGEMENT",
+    "localPath" : "osb_tst5\\repo\\SCMSproject\\DecreseAntipiracy\\blackListManagement\\PS_WS_SCMS_BLACKLISTMANAGEMENT",
+    "authentication" : "http:HttpBasicAuthenticationType",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "https://ws.osbcol.sky.it/osb05/services/scms/blacklist/WS_SCMS_blacklistManagement?WSDL",
+      "xsdSchemas" : [ {
+        "xsdPath" : "/MDW_CDM/EnterpriseServices/SCMSproject/DecreaseAntipiracy/blackListManagement/XSD_SCMS_BLACKLISTMANAGEMENT",
+        "xsdNameSpace" : "http://www.skytv.it/mdw/data"
+      }, {
+        "xsdPath" : "/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+        "xsdNameSpace" : "http://www.skytv.it/mdw/data"
+      } ]
+    },
+    "integrationScenario" : "NOT_DEFINED",
+    "bufferingSupported" : false,
+    "compressionSupported" : false
+  }
+}

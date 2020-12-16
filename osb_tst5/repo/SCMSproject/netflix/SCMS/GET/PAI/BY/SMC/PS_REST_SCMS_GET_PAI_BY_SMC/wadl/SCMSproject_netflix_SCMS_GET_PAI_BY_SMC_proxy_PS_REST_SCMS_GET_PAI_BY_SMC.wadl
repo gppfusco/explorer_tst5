@@ -1,0 +1,40 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<application xmlns:soa="http://www.oracle.com/soa/rest" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://xmlns.oracle.com/OSB_SVIL/SCMSproject/PS_REST_SCMS_GET_PAI_BY_SMC" xmlns="http://wadl.dev.java.net/2009/02">
+   <doc title="PS_REST_SCMS_GET_PAI_BY_SMC">RestService</doc>
+   <grammars>
+      <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://www.skytv.it/mdw/data" schemaLocation="../../MDW_CDM/EnterpriseServices/SCMSproject/netflix/Rest_GetPaiBySMC/xsd/XSD_SCMS_NETFLIX_GET_PAI_SMC.xsd"/>
+        </xsd:schema>
+      <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://www.skytv.it/mdw/data" schemaLocation="../../MDW_CDM/EnterpriseObjects/CommonEntities/restErrors.xsd"/>
+        </xsd:schema>
+   </grammars>
+   <resources>
+      <resource path="/getPaibySmc">
+         <method name="GET" soa:wsdlOperation="Op_getPaiBySmc">
+            <request/>
+            <response status="201">
+               <representation mediaType="application/json" element="cns:responseGetPaiBySmc" xmlns:cns="http://www.skytv.it/mdw/data"/>
+            </response>
+            <response status="401" soa:wsdlFaultName="BadAuthorization">
+               <representation mediaType="application/json" element="cns:error401" xmlns:cns="http://www.skytv.it/mdw/data"/>
+            </response>
+            <response status="403" soa:wsdlFaultName="AllCapabilitesRefused">
+               <representation mediaType="application/json" element="cns:error403" xmlns:cns="http://www.skytv.it/mdw/data"/>
+            </response>
+            <response status="404" soa:wsdlFaultName="NoESNMappingFound">
+               <representation mediaType="application/json" element="cns:error404" xmlns:cns="http://www.skytv.it/mdw/data"/>
+            </response>
+            <response status="500" soa:wsdlFaultName="ServerError">
+               <representation mediaType="application/json" element="cns:error500" xmlns:cns="http://www.skytv.it/mdw/data"/>
+            </response>
+            <response status="503" soa:wsdlFaultName="ServiceUnavailable">
+               <representation mediaType="application/json" element="cns:error503" xmlns:cns="http://www.skytv.it/mdw/data"/>
+            </response>
+            <response status="400" soa:wsdlFaultName="MissingNetflixESN_MissingNetflixPDI">
+               <representation mediaType="application/json" element="cns:error400" xmlns:cns="http://www.skytv.it/mdw/data"/>
+            </response>
+         </method>
+      </resource>
+   </resources>
+</application>

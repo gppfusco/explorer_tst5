@@ -1,0 +1,21 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "https://ws.osbcol.sky.it/osb05",
+    "path" : "/UtilsProject/testMario/PS_TEST_SYSDATE",
+    "name" : "UtilsProject_testMario_PS_TEST_SYSDATE",
+    "remoteName" : "ProxyService/UtilsProject/testMario/PS_TEST_SYSDATE",
+    "localPath" : "osb_tst5\\repo\\UtilsProject\\testMario\\TEST_SYSDATE",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "https://ws.osbcol.sky.it/osb05/UtilsProject/testMario/PS_TEST_SYSDATE?WSDL",
+      "xsdSchemas" : [ {
+        "xsdPath" : "/UtilsProject/testMario/XSD_WS_MAGENTO_VERIFICHE",
+        "xsdNameSpace" : "http://www.skytv.it/mdw/data"
+      } ]
+    },
+    "integrationScenario" : "NOT_DEFINED",
+    "bufferingSupported" : false,
+    "compressionSupported" : false
+  }
+}

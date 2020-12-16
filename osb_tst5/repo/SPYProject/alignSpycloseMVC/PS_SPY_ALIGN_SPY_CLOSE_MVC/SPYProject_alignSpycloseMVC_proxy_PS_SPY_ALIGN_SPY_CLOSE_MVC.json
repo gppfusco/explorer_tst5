@@ -1,0 +1,24 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "https://ws.osbcol.sky.it/osb05",
+    "path" : "/services/spy/PS_WS_SPY_ALIGN_SPY_CLOSE_MVC",
+    "name" : "SPYProject_alignSpycloseMVC_proxy_PS_SPY_ALIGN_SPY_CLOSE_MVC",
+    "remoteName" : "ProxyService/SPYProject/alignSpycloseMVC/proxy/PS_SPY_ALIGN_SPY_CLOSE_MVC",
+    "localPath" : "osb_tst5\\repo\\SPYProject\\alignSpycloseMVC\\PS_SPY_ALIGN_SPY_CLOSE_MVC",
+    "authentication" : "http:HttpBasicAuthenticationType",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "https://ws.osbcol.sky.it/osb05/services/spy/PS_WS_SPY_ALIGN_SPY_CLOSE_MVC?WSDL",
+      "xsdSchemas" : [ {
+        "xsdPath" : "/MDW_CDM/EnterpriseServices/SPYProject/alignSpyCloseMVC/xsd/XSD_SPY_ALIGN_SPY_CLOSE_MVC",
+        "xsdNameSpace" : "http://www.skytv.it/mdw/data"
+      }, {
+        "xsdPath" : "/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+        "xsdNameSpace" : "http://www.skytv.it/mdw/data"
+      } ]
+    },
+    "integrationScenario" : "NOT_DEFINED",
+    "bufferingSupported" : false,
+    "compressionSupported" : false
+  }
+}

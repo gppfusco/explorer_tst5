@@ -1,0 +1,18 @@
+{
+  "MessagingApi" : {
+    "type" : "Messaging",
+    "endpoint" : "https://ws.osbcol.sky.it/osb05",
+    "path" : "/TestMario/max_request/PS_MAX_REQUEST",
+    "name" : "TestMario_max_request_PS_MAX_REQUEST",
+    "remoteName" : "ProxyService/TestMario/max_request/PS_MAX_REQUEST",
+    "localPath" : "osb_tst5\\repo\\TestMario\\max\\request\\MAX_REQUEST",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "https://ws.osbcol.sky.it/osb05",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "NOT_DEFINED",
+    "bufferingSupported" : false,
+    "compressionSupported" : false
+  }
+}

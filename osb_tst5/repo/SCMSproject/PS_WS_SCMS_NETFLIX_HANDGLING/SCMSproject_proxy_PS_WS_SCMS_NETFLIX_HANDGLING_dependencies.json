@@ -1,0 +1,115 @@
+{
+  "DefaultNetworkNode" : {
+    "label" : "ProxyService/SCMSproject/proxy/PS_WS_SCMS_NETFLIX_HANDGLING",
+    "properties" : {
+      "transport-type" : "http",
+      "nodeType" : "Proxy",
+      "service-type" : "SOAP"
+    },
+    "successors" : {
+      "WSDL/MDW_CDM/EnterpriseServices/SCMSproject/Netflix_Handling/wsdl/WS_SCMS_NETFLIX_HANDLING" : {
+        "label" : "WSDL/MDW_CDM/EnterpriseServices/SCMSproject/Netflix_Handling/wsdl/WS_SCMS_NETFLIX_HANDLING",
+        "properties" : {
+          "nodeType" : "WSDL"
+        },
+        "successors" : {
+          "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY" : {
+            "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          },
+          "XMLSchema/MDW_CDM/EnterpriseServices/SCMSproject/Netflix_Handling/xsd/XSD_SCMS_NETFLIX_HANDLING" : {
+            "label" : "XMLSchema/MDW_CDM/EnterpriseServices/SCMSproject/Netflix_Handling/xsd/XSD_SCMS_NETFLIX_HANDLING",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          }
+        }
+      },
+      "Pipeline/SCMSproject/pipeline/PL_WS_SCMS_NETFLIX_HANDLING" : {
+        "label" : "Pipeline/SCMSproject/pipeline/PL_WS_SCMS_NETFLIX_HANDLING",
+        "properties" : {
+          "nodeType" : "Pipeline"
+        },
+        "successors" : {
+          "PipelineTemplate/MDW_CO/templates/pipeline/PL_WS_SERVICE_ROUTING_TEMPLATE_VALIDATION" : {
+            "label" : "PipelineTemplate/MDW_CO/templates/pipeline/PL_WS_SERVICE_ROUTING_TEMPLATE_VALIDATION",
+            "properties" : {
+              "nodeType" : "PipelineTemplate"
+            },
+            "successors" : { }
+          },
+          "Pipeline/SCMSproject/pipeline/PL_INTERNAL_ENQUEUE_SCMS_NETFLIX_HANDLING" : {
+            "label" : "Pipeline/SCMSproject/pipeline/PL_INTERNAL_ENQUEUE_SCMS_NETFLIX_HANDLING",
+            "properties" : {
+              "nodeType" : "Pipeline"
+            },
+            "successors" : {
+              "BusinessService/SCMSproject/businessService/BS_JMS_SCMS_NETFLIX_HANDLING" : {
+                "label" : "BusinessService/SCMSproject/businessService/BS_JMS_SCMS_NETFLIX_HANDLING",
+                "properties" : {
+                  "nodeType" : "BusinessService"
+                },
+                "successors" : { }
+              },
+              "PipelineTemplate/MDW_CO/templates/pipeline/PL_ENQUEUE_INTERNAL_TEMPLATE" : {
+                "label" : "PipelineTemplate/MDW_CO/templates/pipeline/PL_ENQUEUE_INTERNAL_TEMPLATE",
+                "properties" : {
+                  "nodeType" : "PipelineTemplate"
+                },
+                "successors" : { }
+              },
+              "WSDL/MDW_CDM/EnterpriseServices/SCMSproject/Netflix_Handling/wsdl/WS_SCMS_NETFLIX_HANDLING" : {
+                "label" : "WSDL/MDW_CDM/EnterpriseServices/SCMSproject/Netflix_Handling/wsdl/WS_SCMS_NETFLIX_HANDLING",
+                "properties" : {
+                  "nodeType" : "WSDL"
+                },
+                "successors" : {
+                  "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY" : {
+                    "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+                    "properties" : {
+                      "nodeType" : "XMLSchema"
+                    },
+                    "successors" : { }
+                  },
+                  "XMLSchema/MDW_CDM/EnterpriseServices/SCMSproject/Netflix_Handling/xsd/XSD_SCMS_NETFLIX_HANDLING" : {
+                    "label" : "XMLSchema/MDW_CDM/EnterpriseServices/SCMSproject/Netflix_Handling/xsd/XSD_SCMS_NETFLIX_HANDLING",
+                    "properties" : {
+                      "nodeType" : "XMLSchema"
+                    },
+                    "successors" : { }
+                  }
+                }
+              }
+            }
+          },
+          "WSDL/MDW_CDM/EnterpriseServices/SCMSproject/Netflix_Handling/wsdl/WS_SCMS_NETFLIX_HANDLING" : {
+            "label" : "WSDL/MDW_CDM/EnterpriseServices/SCMSproject/Netflix_Handling/wsdl/WS_SCMS_NETFLIX_HANDLING",
+            "properties" : {
+              "nodeType" : "WSDL"
+            },
+            "successors" : {
+              "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY" : {
+                "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              },
+              "XMLSchema/MDW_CDM/EnterpriseServices/SCMSproject/Netflix_Handling/xsd/XSD_SCMS_NETFLIX_HANDLING" : {
+                "label" : "XMLSchema/MDW_CDM/EnterpriseServices/SCMSproject/Netflix_Handling/xsd/XSD_SCMS_NETFLIX_HANDLING",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

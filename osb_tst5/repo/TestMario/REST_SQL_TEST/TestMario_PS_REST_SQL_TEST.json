@@ -1,0 +1,22 @@
+{
+  "RestApi" : {
+    "type" : "REST",
+    "endpoint" : "https://ws.osbcol.sky.it/osb05",
+    "path" : "/TestMario/PS_REST_SQL_TEST",
+    "name" : "TestMario_PS_REST_SQL_TEST",
+    "remoteName" : "ProxyService/TestMario/PS_REST_SQL_TEST",
+    "localPath" : "osb_tst5\\repo\\TestMario\\REST_SQL_TEST",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "https://ws.osbcol.sky.it/osb05/TestMario/PS_REST_SQL_TEST?WADL",
+      "xsdSchemas" : [ {
+        "xsdPath" : "TestMario/Resources/BS_SQL_TEST",
+        "xsdNameSpace" : "http://xmlns.oracle.com/pcbpel/adapter/db/BS_SQL_TEST"
+      } ],
+      "soapApiSpec" : null
+    },
+    "integrationScenario" : "NOT_DEFINED",
+    "bufferingSupported" : false,
+    "compressionSupported" : false
+  }
+}

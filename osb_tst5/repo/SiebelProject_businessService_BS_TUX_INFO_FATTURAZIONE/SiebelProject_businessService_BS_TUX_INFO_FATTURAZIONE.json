@@ -1,0 +1,18 @@
+{
+  "MessagingApi" : {
+    "type" : "Messaging",
+    "endpoint" : "https://ws.osbcol.sky.it/osb05",
+    "path" : "/SiebelProject/businessService/BS_TUX_INFO_FATTURAZIONE",
+    "name" : "SiebelProject_businessService_BS_TUX_INFO_FATTURAZIONE",
+    "remoteName" : "ProxyService/SiebelProject/businessService/BS_TUX_INFO_FATTURAZIONE",
+    "localPath" : "osb_tst5\\repo\\SiebelProject_businessService_BS_TUX_INFO_FATTURAZIONE",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "https://ws.osbcol.sky.it/osb05",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "NOT_DEFINED",
+    "bufferingSupported" : false,
+    "compressionSupported" : false
+  }
+}

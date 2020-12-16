@@ -1,0 +1,83 @@
+{
+  "DefaultNetworkNode" : {
+    "label" : "ProxyService/TestLog/proxy/PS_TEST_LOGProxyService",
+    "properties" : {
+      "transport-type" : "http",
+      "nodeType" : "Proxy",
+      "service-type" : "SOAP"
+    },
+    "successors" : {
+      "Pipeline/TestLog/pipeline/PL_TEST_LOG" : {
+        "label" : "Pipeline/TestLog/pipeline/PL_TEST_LOG",
+        "properties" : {
+          "nodeType" : "Pipeline"
+        },
+        "successors" : {
+          "Xquery/MDW_CDM/ApplicationObjects/LOG/trasformation/populate_log_testXml" : {
+            "label" : "Xquery/MDW_CDM/ApplicationObjects/LOG/trasformation/populate_log_testXml",
+            "properties" : {
+              "nodeType" : "Xquery"
+            },
+            "successors" : { }
+          },
+          "Pipeline/TestLog/pipeline/Pipeline" : {
+            "label" : "Pipeline/TestLog/pipeline/Pipeline",
+            "properties" : {
+              "nodeType" : "Pipeline"
+            },
+            "successors" : { }
+          },
+          "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY" : {
+            "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          },
+          "Xquery/MDW_CDM/ApplicationObjects/LOG/trasformation/populate_log_sizeOf" : {
+            "label" : "Xquery/MDW_CDM/ApplicationObjects/LOG/trasformation/populate_log_sizeOf",
+            "properties" : {
+              "nodeType" : "Xquery"
+            },
+            "successors" : { }
+          },
+          "Xquery/MDW_CO/transformation/dyn_validation" : {
+            "label" : "Xquery/MDW_CO/transformation/dyn_validation",
+            "properties" : {
+              "nodeType" : "Xquery"
+            },
+            "successors" : { }
+          },
+          "Xquery/MDW_CO/transformation/create_soap_header" : {
+            "label" : "Xquery/MDW_CO/transformation/create_soap_header",
+            "properties" : {
+              "nodeType" : "Xquery"
+            },
+            "successors" : { }
+          },
+          "WSDL/MDW_CDM/EnterpriseServices/SiebelProject/Outbound/wsdl/WS_CRM_OUTMSGCONTACT" : {
+            "label" : "WSDL/MDW_CDM/EnterpriseServices/SiebelProject/Outbound/wsdl/WS_CRM_OUTMSGCONTACT",
+            "properties" : {
+              "nodeType" : "WSDL"
+            },
+            "successors" : { }
+          },
+          "BusinessService/MDW_CO/businessServices/BS_LOG_ENQUEUE" : {
+            "label" : "BusinessService/MDW_CO/businessServices/BS_LOG_ENQUEUE",
+            "properties" : {
+              "nodeType" : "BusinessService"
+            },
+            "successors" : { }
+          }
+        }
+      },
+      "WSDL/MDW_CDM/EnterpriseServices/SiebelProject/Outbound/wsdl/WS_CRM_OUTMSGCONTACT" : {
+        "label" : "WSDL/MDW_CDM/EnterpriseServices/SiebelProject/Outbound/wsdl/WS_CRM_OUTMSGCONTACT",
+        "properties" : {
+          "nodeType" : "WSDL"
+        },
+        "successors" : { }
+      }
+    }
+  }
+}

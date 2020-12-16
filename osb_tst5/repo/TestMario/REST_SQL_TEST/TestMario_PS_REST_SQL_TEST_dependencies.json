@@ -1,0 +1,48 @@
+{
+  "DefaultNetworkNode" : {
+    "label" : "ProxyService/TestMario/PS_REST_SQL_TEST",
+    "properties" : {
+      "transport-type" : "http",
+      "nodeType" : "Proxy",
+      "service-type" : "REST"
+    },
+    "successors" : {
+      "WADL/TestMario/Resources/PS_REST_SQL_TEST" : {
+        "label" : "WADL/TestMario/Resources/PS_REST_SQL_TEST",
+        "properties" : {
+          "nodeType" : "WADL"
+        },
+        "successors" : { }
+      },
+      "BusinessService/TestMario/BS_SQL_TEST" : {
+        "label" : "BusinessService/TestMario/BS_SQL_TEST",
+        "properties" : {
+          "nodeType" : "BusinessService"
+        },
+        "successors" : {
+          "JCA/TestMario/Resources/BS_SQL_TEST_db" : {
+            "label" : "JCA/TestMario/Resources/BS_SQL_TEST_db",
+            "properties" : {
+              "nodeType" : "JCA"
+            },
+            "successors" : { }
+          },
+          "WSDL/TestMario/Resources/BS_SQL_TEST/concrete" : {
+            "label" : "WSDL/TestMario/Resources/BS_SQL_TEST/concrete",
+            "properties" : {
+              "nodeType" : "WSDL"
+            },
+            "successors" : { }
+          }
+        }
+      },
+      "WSDL/TestMario/Resources/BS_SQL_TEST/concrete" : {
+        "label" : "WSDL/TestMario/Resources/BS_SQL_TEST/concrete",
+        "properties" : {
+          "nodeType" : "WSDL"
+        },
+        "successors" : { }
+      }
+    }
+  }
+}

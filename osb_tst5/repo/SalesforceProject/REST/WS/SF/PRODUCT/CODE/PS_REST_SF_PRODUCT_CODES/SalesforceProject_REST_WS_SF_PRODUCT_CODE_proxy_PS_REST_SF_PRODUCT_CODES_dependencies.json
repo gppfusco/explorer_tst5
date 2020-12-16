@@ -1,0 +1,144 @@
+{
+  "DefaultNetworkNode" : {
+    "label" : "ProxyService/SalesforceProject/REST_WS_SF_PRODUCT_CODE/proxy/PS_REST_SF_PRODUCT_CODES",
+    "properties" : {
+      "transport-type" : "http",
+      "nodeType" : "Proxy",
+      "service-type" : "REST"
+    },
+    "successors" : {
+      "WADL/SalesforceProject/Resources/PS_REST_SF_PRODUCT_CODES" : {
+        "label" : "WADL/SalesforceProject/Resources/PS_REST_SF_PRODUCT_CODES",
+        "properties" : {
+          "nodeType" : "WADL"
+        },
+        "successors" : { }
+      },
+      "WSDL/SalesforceProject/Resources/PS_REST_SF_PRODUCT_CODES" : {
+        "label" : "WSDL/SalesforceProject/Resources/PS_REST_SF_PRODUCT_CODES",
+        "properties" : {
+          "nodeType" : "WSDL"
+        },
+        "successors" : {
+          "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors" : {
+            "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          },
+          "XMLSchema/MDW_CDM/EnterpriseServices/SalesforceProject/Rest_Product_Codes/xsd/XSD_SF_REST_PRODUCT_CODES" : {
+            "label" : "XMLSchema/MDW_CDM/EnterpriseServices/SalesforceProject/Rest_Product_Codes/xsd/XSD_SF_REST_PRODUCT_CODES",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          }
+        }
+      },
+      "Pipeline/SalesforceProject/REST_WS_SF_PRODUCT_CODE/pipeline/PL_REST_SF_PRODUCT_CODES" : {
+        "label" : "Pipeline/SalesforceProject/REST_WS_SF_PRODUCT_CODE/pipeline/PL_REST_SF_PRODUCT_CODES",
+        "properties" : {
+          "nodeType" : "Pipeline"
+        },
+        "successors" : {
+          "Pipeline/SalesforceProject/REST_WS_SF_PRODUCT_CODE/pipeline/PL_INTERNAL_REST_PRODUCT_CODES" : {
+            "label" : "Pipeline/SalesforceProject/REST_WS_SF_PRODUCT_CODE/pipeline/PL_INTERNAL_REST_PRODUCT_CODES",
+            "properties" : {
+              "nodeType" : "Pipeline"
+            },
+            "successors" : {
+              "Xquery/SalesforceProject/REST_WS_SF_PRODUCT_CODE/transformation/createRequest_EjbGetProductCodeToRateCode" : {
+                "label" : "Xquery/SalesforceProject/REST_WS_SF_PRODUCT_CODE/transformation/createRequest_EjbGetProductCodeToRateCode",
+                "properties" : {
+                  "nodeType" : "Xquery"
+                },
+                "successors" : { }
+              },
+              "Xquery/SalesforceProject/REST_WS_SF_PRODUCT_CODE/transformation/createResponse_EjbGetProductCodeToRateCode" : {
+                "label" : "Xquery/SalesforceProject/REST_WS_SF_PRODUCT_CODE/transformation/createResponse_EjbGetProductCodeToRateCode",
+                "properties" : {
+                  "nodeType" : "Xquery"
+                },
+                "successors" : { }
+              },
+              "WSDL/SalesforceProject/Resources/PS_REST_SF_PRODUCT_CODES" : {
+                "label" : "WSDL/SalesforceProject/Resources/PS_REST_SF_PRODUCT_CODES",
+                "properties" : {
+                  "nodeType" : "WSDL"
+                },
+                "successors" : {
+                  "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors" : {
+                    "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors",
+                    "properties" : {
+                      "nodeType" : "XMLSchema"
+                    },
+                    "successors" : { }
+                  },
+                  "XMLSchema/MDW_CDM/EnterpriseServices/SalesforceProject/Rest_Product_Codes/xsd/XSD_SF_REST_PRODUCT_CODES" : {
+                    "label" : "XMLSchema/MDW_CDM/EnterpriseServices/SalesforceProject/Rest_Product_Codes/xsd/XSD_SF_REST_PRODUCT_CODES",
+                    "properties" : {
+                      "nodeType" : "XMLSchema"
+                    },
+                    "successors" : { }
+                  }
+                }
+              },
+              "BusinessService/MDW_CO/businessServices/BS_WS_EJB_FORCE" : {
+                "label" : "BusinessService/MDW_CO/businessServices/BS_WS_EJB_FORCE",
+                "properties" : {
+                  "nodeType" : "BusinessService"
+                },
+                "successors" : {
+                  "WSDL/MDW_CDM/ApplicationObjects/SALESFORCE/ejb_mdw/SalesForcePartnerAdapterCRMService" : {
+                    "label" : "WSDL/MDW_CDM/ApplicationObjects/SALESFORCE/ejb_mdw/SalesForcePartnerAdapterCRMService",
+                    "properties" : {
+                      "nodeType" : "WSDL"
+                    },
+                    "successors" : { }
+                  }
+                }
+              },
+              "PipelineTemplate/MDW_CO/templates/pipeline/PL_INTERNAL_GENERIC_OPERATION_TEMPLATE" : {
+                "label" : "PipelineTemplate/MDW_CO/templates/pipeline/PL_INTERNAL_GENERIC_OPERATION_TEMPLATE",
+                "properties" : {
+                  "nodeType" : "PipelineTemplate"
+                },
+                "successors" : { }
+              }
+            }
+          },
+          "WSDL/SalesforceProject/Resources/PS_REST_SF_PRODUCT_CODES" : {
+            "label" : "WSDL/SalesforceProject/Resources/PS_REST_SF_PRODUCT_CODES",
+            "properties" : {
+              "nodeType" : "WSDL"
+            },
+            "successors" : {
+              "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors" : {
+                "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              },
+              "XMLSchema/MDW_CDM/EnterpriseServices/SalesforceProject/Rest_Product_Codes/xsd/XSD_SF_REST_PRODUCT_CODES" : {
+                "label" : "XMLSchema/MDW_CDM/EnterpriseServices/SalesforceProject/Rest_Product_Codes/xsd/XSD_SF_REST_PRODUCT_CODES",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              }
+            }
+          },
+          "PipelineTemplate/MDW_CO/templates/pipeline/PL_WS_SERVICE_ROUTING_TEMPLATE_VALIDATION" : {
+            "label" : "PipelineTemplate/MDW_CO/templates/pipeline/PL_WS_SERVICE_ROUTING_TEMPLATE_VALIDATION",
+            "properties" : {
+              "nodeType" : "PipelineTemplate"
+            },
+            "successors" : { }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "https://ws.osbcol.sky.it/osb05",
+    "path" : "/services/siebel/WS_CRM_OUTMSGACCOUNT",
+    "name" : "SiebelProject_proxy_outbound_gerarchico_PS_WS_CRM_OUTMSGACCOUNT",
+    "remoteName" : "ProxyService/SiebelProject/proxy/outbound/gerarchico/PS_WS_CRM_OUTMSGACCOUNT",
+    "localPath" : "osb_tst5\\repo\\SiebelProject\\outbound_gerarchico_PS_WS_CRM_OUTMSGACCOUNT",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "https://ws.osbcol.sky.it/osb05/services/siebel/WS_CRM_OUTMSGACCOUNT?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "NOT_DEFINED",
+    "bufferingSupported" : false,
+    "compressionSupported" : false
+  }
+}

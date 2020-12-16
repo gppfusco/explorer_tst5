@@ -1,0 +1,18 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "https://ws.osbcol.sky.it/osb05",
+    "path" : "/services/siebel/WS_SBL_FPS_BS_CRM",
+    "name" : "SiebelProject_WS_FPS_BS_CRM_proxy_PS_WS_SBL_FPS_BS_CRM",
+    "remoteName" : "ProxyService/SiebelProject/WS_FPS_BS_CRM/proxy/PS_WS_SBL_FPS_BS_CRM",
+    "localPath" : "osb_tst5\\repo\\SiebelProject\\WS\\FPS\\BS\\CRM\\PS_WS_SBL_FPS_BS_CRM",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "https://ws.osbcol.sky.it/osb05/services/siebel/WS_SBL_FPS_BS_CRM?WSDL",
+      "xsdSchemas" : [ ]
+    },
+    "integrationScenario" : "NOT_DEFINED",
+    "bufferingSupported" : false,
+    "compressionSupported" : false
+  }
+}

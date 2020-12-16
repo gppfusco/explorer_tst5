@@ -1,0 +1,34 @@
+{
+  "RestApi" : {
+    "type" : "REST",
+    "endpoint" : "https://ws.osbcol.sky.it/osb05",
+    "path" : "/services/mdw/normaddress",
+    "name" : "BlueBirdProject_OSS_normAddress_proxy_PS_REST_MDW_ADDRESS_NORMALIZATION",
+    "remoteName" : "ProxyService/BlueBirdProject/OSS/normAddress/proxy/PS_REST_MDW_ADDRESS_NORMALIZATION",
+    "localPath" : "osb_tst5\\repo\\BlueBirdProject\\OSS\\normAddress\\PS_REST_MDW_ADDRESS_NORMALIZATION",
+    "authentication" : "http:HttpBasicAuthenticationType",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "https://ws.osbcol.sky.it/osb05/services/mdw/normaddress?WADL",
+      "xsdSchemas" : [ {
+        "xsdPath" : "MDW_CDM/EnterpriseServices/BlueBirdProject/OSS/normAddress/XSD_MDW_NORMADDRESS",
+        "xsdNameSpace" : "http://www.skytv.it/mdw/data"
+      }, {
+        "xsdPath" : "MDW_CDM/EnterpriseObjects/CommonEntities/restErrors",
+        "xsdNameSpace" : "http://www.skytv.it/mdw/data"
+      } ],
+      "soapApiSpec" : {
+        "apiSpecEndpoint" : "https://ws.osbcol.sky.it/osb05",
+        "xsdSchemas" : [ {
+          "xsdPath" : "/MDW_CDM/EnterpriseServices/BlueBirdProject/OSS/normAddress/XSD_MDW_NORMADDRESS",
+          "xsdNameSpace" : "http://www.skytv.it/mdw/data"
+        }, {
+          "xsdPath" : "/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors",
+          "xsdNameSpace" : "http://www.skytv.it/mdw/data"
+        } ]
+      }
+    },
+    "integrationScenario" : "NOT_DEFINED",
+    "bufferingSupported" : false,
+    "compressionSupported" : false
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "DefaultNetworkNode" : {
+    "label" : "ProxyService/UtilsProject/testMario/PS_TEST_SYSDATE",
+    "properties" : {
+      "transport-type" : "http",
+      "nodeType" : "Proxy",
+      "service-type" : "SOAP"
+    },
+    "successors" : {
+      "WSDL/UtilsProject/testMario/WSDL_WS_MAGENTO_VERIFICHE" : {
+        "label" : "WSDL/UtilsProject/testMario/WSDL_WS_MAGENTO_VERIFICHE",
+        "properties" : {
+          "nodeType" : "WSDL"
+        },
+        "successors" : {
+          "XMLSchema/UtilsProject/testMario/XSD_WS_MAGENTO_VERIFICHE" : {
+            "label" : "XMLSchema/UtilsProject/testMario/XSD_WS_MAGENTO_VERIFICHE",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          }
+        }
+      },
+      "Pipeline/UtilsProject/testMario/PL_TEST_SYSDATE" : {
+        "label" : "Pipeline/UtilsProject/testMario/PL_TEST_SYSDATE",
+        "properties" : {
+          "nodeType" : "Pipeline"
+        },
+        "successors" : {
+          "Xquery/UtilsProject/testMario/createResponseSysdate" : {
+            "label" : "Xquery/UtilsProject/testMario/createResponseSysdate",
+            "properties" : {
+              "nodeType" : "Xquery"
+            },
+            "successors" : { }
+          },
+          "WSDL/UtilsProject/testMario/WSDL_WS_MAGENTO_VERIFICHE" : {
+            "label" : "WSDL/UtilsProject/testMario/WSDL_WS_MAGENTO_VERIFICHE",
+            "properties" : {
+              "nodeType" : "WSDL"
+            },
+            "successors" : {
+              "XMLSchema/UtilsProject/testMario/XSD_WS_MAGENTO_VERIFICHE" : {
+                "label" : "XMLSchema/UtilsProject/testMario/XSD_WS_MAGENTO_VERIFICHE",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

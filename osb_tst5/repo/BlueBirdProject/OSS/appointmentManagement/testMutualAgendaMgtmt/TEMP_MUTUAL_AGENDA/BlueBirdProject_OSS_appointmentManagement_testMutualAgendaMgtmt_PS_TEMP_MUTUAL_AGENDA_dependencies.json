@@ -1,0 +1,115 @@
+{
+  "DefaultNetworkNode" : {
+    "label" : "ProxyService/BlueBirdProject/OSS/appointmentManagement/testMutualAgendaMgtmt/PS_TEMP_MUTUAL_AGENDA",
+    "properties" : {
+      "transport-type" : "http",
+      "nodeType" : "Proxy",
+      "service-type" : "SOAP"
+    },
+    "successors" : {
+      "Pipeline/BlueBirdProject/OSS/appointmentManagement/testMutualAgendaMgtmt/PL_TEST_MUTUAL_AGENDA" : {
+        "label" : "Pipeline/BlueBirdProject/OSS/appointmentManagement/testMutualAgendaMgtmt/PL_TEST_MUTUAL_AGENDA",
+        "properties" : {
+          "nodeType" : "Pipeline"
+        },
+        "successors" : {
+          "PipelineTemplate/MDW_CO/templates/pipeline/PL_WS_GENERIC_OPERATION_TEMPLATE" : {
+            "label" : "PipelineTemplate/MDW_CO/templates/pipeline/PL_WS_GENERIC_OPERATION_TEMPLATE",
+            "properties" : {
+              "nodeType" : "PipelineTemplate"
+            },
+            "successors" : { }
+          },
+          "BusinessService/BlueBirdProject/OSS/appointmentManagement/businessservice/BS_REST_AGENDA_MGMT_TOOL_APPOINTMENTS" : {
+            "label" : "BusinessService/BlueBirdProject/OSS/appointmentManagement/businessservice/BS_REST_AGENDA_MGMT_TOOL_APPOINTMENTS",
+            "properties" : {
+              "nodeType" : "BusinessService"
+            },
+            "successors" : {
+              "WADL/BlueBirdProject/Resources/BS_REST_AGENDA_MGMT_TOOL_APPOINTMENTS" : {
+                "label" : "WADL/BlueBirdProject/Resources/BS_REST_AGENDA_MGMT_TOOL_APPOINTMENTS",
+                "properties" : {
+                  "nodeType" : "WADL"
+                },
+                "successors" : { }
+              },
+              "WSDL/BlueBirdProject/Resources/BS_REST_AGENDA_MGMT_TOOL_APPOINTMENTS" : {
+                "label" : "WSDL/BlueBirdProject/Resources/BS_REST_AGENDA_MGMT_TOOL_APPOINTMENTS",
+                "properties" : {
+                  "nodeType" : "WSDL"
+                },
+                "successors" : {
+                  "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors" : {
+                    "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors",
+                    "properties" : {
+                      "nodeType" : "XMLSchema"
+                    },
+                    "successors" : { }
+                  },
+                  "XMLSchema/MDW_CDM/ApplicationObjects/BLUEBIRD/AGENDA_MGTM_TOOL/slotPrioritization/xsd/XSD_AGENDA_MGMT_TOOL_APPOINTMENTS" : {
+                    "label" : "XMLSchema/MDW_CDM/ApplicationObjects/BLUEBIRD/AGENDA_MGTM_TOOL/slotPrioritization/xsd/XSD_AGENDA_MGMT_TOOL_APPOINTMENTS",
+                    "properties" : {
+                      "nodeType" : "XMLSchema"
+                    },
+                    "successors" : { }
+                  }
+                }
+              }
+            }
+          },
+          "WSDL/BlueBirdProject/Resources/BS_REST_AGENDA_MGMT_TOOL_APPOINTMENTS" : {
+            "label" : "WSDL/BlueBirdProject/Resources/BS_REST_AGENDA_MGMT_TOOL_APPOINTMENTS",
+            "properties" : {
+              "nodeType" : "WSDL"
+            },
+            "successors" : {
+              "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors" : {
+                "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              },
+              "XMLSchema/MDW_CDM/ApplicationObjects/BLUEBIRD/AGENDA_MGTM_TOOL/slotPrioritization/xsd/XSD_AGENDA_MGMT_TOOL_APPOINTMENTS" : {
+                "label" : "XMLSchema/MDW_CDM/ApplicationObjects/BLUEBIRD/AGENDA_MGTM_TOOL/slotPrioritization/xsd/XSD_AGENDA_MGMT_TOOL_APPOINTMENTS",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              }
+            }
+          }
+        }
+      },
+      "ServiceProvider/MDW_CDM/ServiceKeyProviders/key_provide_agenda/mgmt/tool" : {
+        "label" : "ServiceProvider/MDW_CDM/ServiceKeyProviders/key_provide_agenda/mgmt/tool",
+        "properties" : {
+          "nodeType" : "ServiceProvider"
+        },
+        "successors" : { }
+      },
+      "WSDL/BlueBirdProject/Resources/BS_REST_AGENDA_MGMT_TOOL_APPOINTMENTS" : {
+        "label" : "WSDL/BlueBirdProject/Resources/BS_REST_AGENDA_MGMT_TOOL_APPOINTMENTS",
+        "properties" : {
+          "nodeType" : "WSDL"
+        },
+        "successors" : {
+          "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors" : {
+            "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          },
+          "XMLSchema/MDW_CDM/ApplicationObjects/BLUEBIRD/AGENDA_MGTM_TOOL/slotPrioritization/xsd/XSD_AGENDA_MGMT_TOOL_APPOINTMENTS" : {
+            "label" : "XMLSchema/MDW_CDM/ApplicationObjects/BLUEBIRD/AGENDA_MGTM_TOOL/slotPrioritization/xsd/XSD_AGENDA_MGMT_TOOL_APPOINTMENTS",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "SoapApi" : {
+    "type" : "SOAP",
+    "endpoint" : "https://ws.osbcol.sky.it/osb05",
+    "path" : "/services/scms/WS_SCMS_NETFLIX_HANDLING",
+    "name" : "SCMSproject_proxy_PS_WS_SCMS_NETFLIX_HANDGLING",
+    "remoteName" : "ProxyService/SCMSproject/proxy/PS_WS_SCMS_NETFLIX_HANDGLING",
+    "localPath" : "osb_tst5\\repo\\SCMSproject\\PS_WS_SCMS_NETFLIX_HANDGLING",
+    "authentication" : "Undefined",
+    "apiSpecification" : {
+      "apiSpecEndpoint" : "https://ws.osbcol.sky.it/osb05/services/scms/WS_SCMS_NETFLIX_HANDLING?WSDL",
+      "xsdSchemas" : [ {
+        "xsdPath" : "/MDW_CDM/EnterpriseServices/SCMSproject/Netflix_Handling/xsd/XSD_SCMS_NETFLIX_HANDLING",
+        "xsdNameSpace" : "http://www.skytv.it/mdw/data"
+      }, {
+        "xsdPath" : "/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+        "xsdNameSpace" : "http://www.skytv.it/mdw/data"
+      } ]
+    },
+    "integrationScenario" : "NOT_DEFINED",
+    "bufferingSupported" : false,
+    "compressionSupported" : false
+  }
+}

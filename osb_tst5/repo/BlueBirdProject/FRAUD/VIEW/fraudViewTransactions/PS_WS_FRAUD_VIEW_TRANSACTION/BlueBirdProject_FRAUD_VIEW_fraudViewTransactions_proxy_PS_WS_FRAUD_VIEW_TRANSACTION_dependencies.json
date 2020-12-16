@@ -1,0 +1,137 @@
+{
+  "DefaultNetworkNode" : {
+    "label" : "ProxyService/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/proxy/PS_WS_FRAUD_VIEW_TRANSACTION",
+    "properties" : {
+      "transport-type" : "http",
+      "nodeType" : "Proxy",
+      "service-type" : "SOAP"
+    },
+    "successors" : {
+      "WSDL/MDW_CDM/EnterpriseServices/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/wsdl/WS_FRAUD_VIEW_TRANSACTION" : {
+        "label" : "WSDL/MDW_CDM/EnterpriseServices/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/wsdl/WS_FRAUD_VIEW_TRANSACTION",
+        "properties" : {
+          "nodeType" : "WSDL"
+        },
+        "successors" : {
+          "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY" : {
+            "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          },
+          "XMLSchema/MDW_CDM/EnterpriseServices/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/xsd/XSD_FRAUD_VIEW_TRANSACTION" : {
+            "label" : "XMLSchema/MDW_CDM/EnterpriseServices/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/xsd/XSD_FRAUD_VIEW_TRANSACTION",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          }
+        }
+      },
+      "Pipeline/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/pipeline/PL_WS_FRAUD_VIEW_TRANSACTION" : {
+        "label" : "Pipeline/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/pipeline/PL_WS_FRAUD_VIEW_TRANSACTION",
+        "properties" : {
+          "nodeType" : "Pipeline"
+        },
+        "successors" : {
+          "Pipeline/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/pipeline/PL_WS_FRAUD_VIEW_TRANSACTION_SendTraficInfo" : {
+            "label" : "Pipeline/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/pipeline/PL_WS_FRAUD_VIEW_TRANSACTION_SendTraficInfo",
+            "properties" : {
+              "nodeType" : "Pipeline"
+            },
+            "successors" : {
+              "Xquery/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/transformations/createRequest_BS_FRAUD_VIEW_SendTraficInfo" : {
+                "label" : "Xquery/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/transformations/createRequest_BS_FRAUD_VIEW_SendTraficInfo",
+                "properties" : {
+                  "nodeType" : "Xquery"
+                },
+                "successors" : { }
+              },
+              "BusinessService/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/businessService/BS_WS_FRAUD_VIEW_kenan_SendTraficInfo" : {
+                "label" : "BusinessService/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/businessService/BS_WS_FRAUD_VIEW_kenan_SendTraficInfo",
+                "properties" : {
+                  "nodeType" : "BusinessService"
+                },
+                "successors" : {
+                  "WSDL/MDW_CDM/ApplicationObjects/BLUEBIRD/FRAUD_VIEW/ws_kenan" : {
+                    "label" : "WSDL/MDW_CDM/ApplicationObjects/BLUEBIRD/FRAUD_VIEW/ws_kenan",
+                    "properties" : {
+                      "nodeType" : "WSDL"
+                    },
+                    "successors" : { }
+                  }
+                }
+              },
+              "Xquery/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/transformations/createResponse_WS_FRAUD_VIEW_TRANSACTION_SendTraficInfo" : {
+                "label" : "Xquery/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/transformations/createResponse_WS_FRAUD_VIEW_TRANSACTION_SendTraficInfo",
+                "properties" : {
+                  "nodeType" : "Xquery"
+                },
+                "successors" : { }
+              },
+              "WSDL/MDW_CDM/EnterpriseServices/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/wsdl/WS_FRAUD_VIEW_TRANSACTION" : {
+                "label" : "WSDL/MDW_CDM/EnterpriseServices/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/wsdl/WS_FRAUD_VIEW_TRANSACTION",
+                "properties" : {
+                  "nodeType" : "WSDL"
+                },
+                "successors" : {
+                  "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY" : {
+                    "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+                    "properties" : {
+                      "nodeType" : "XMLSchema"
+                    },
+                    "successors" : { }
+                  },
+                  "XMLSchema/MDW_CDM/EnterpriseServices/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/xsd/XSD_FRAUD_VIEW_TRANSACTION" : {
+                    "label" : "XMLSchema/MDW_CDM/EnterpriseServices/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/xsd/XSD_FRAUD_VIEW_TRANSACTION",
+                    "properties" : {
+                      "nodeType" : "XMLSchema"
+                    },
+                    "successors" : { }
+                  }
+                }
+              },
+              "PipelineTemplate/MDW_CO/templates/pipeline/PL_INTERNAL_GENERIC_OPERATION_TEMPLATE" : {
+                "label" : "PipelineTemplate/MDW_CO/templates/pipeline/PL_INTERNAL_GENERIC_OPERATION_TEMPLATE",
+                "properties" : {
+                  "nodeType" : "PipelineTemplate"
+                },
+                "successors" : { }
+              }
+            }
+          },
+          "PipelineTemplate/MDW_CO/templates/pipeline/PL_WS_SERVICE_ROUTING_TEMPLATE_VALIDATION" : {
+            "label" : "PipelineTemplate/MDW_CO/templates/pipeline/PL_WS_SERVICE_ROUTING_TEMPLATE_VALIDATION",
+            "properties" : {
+              "nodeType" : "PipelineTemplate"
+            },
+            "successors" : { }
+          },
+          "WSDL/MDW_CDM/EnterpriseServices/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/wsdl/WS_FRAUD_VIEW_TRANSACTION" : {
+            "label" : "WSDL/MDW_CDM/EnterpriseServices/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/wsdl/WS_FRAUD_VIEW_TRANSACTION",
+            "properties" : {
+              "nodeType" : "WSDL"
+            },
+            "successors" : {
+              "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY" : {
+                "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              },
+              "XMLSchema/MDW_CDM/EnterpriseServices/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/xsd/XSD_FRAUD_VIEW_TRANSACTION" : {
+                "label" : "XMLSchema/MDW_CDM/EnterpriseServices/BlueBirdProject/FRAUD_VIEW/fraudViewTransactions/xsd/XSD_FRAUD_VIEW_TRANSACTION",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

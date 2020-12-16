@@ -1,0 +1,78 @@
+{
+  "DefaultNetworkNode" : {
+    "label" : "ProxyService/MDWProject/AlignmentScenarioResubmission/proxy/PS_WS_MDW_ALIGN_SCENARIO_RESUBMISSION",
+    "properties" : {
+      "transport-type" : "http",
+      "nodeType" : "Proxy",
+      "service-type" : "SOAP"
+    },
+    "successors" : {
+      "Pipeline/MDWProject/AlignmentScenarioResubmission/pipeline/PL_WS_MDW_ALIGN_SCENARIO_RESUBMISSION_ENQUEUE" : {
+        "label" : "Pipeline/MDWProject/AlignmentScenarioResubmission/pipeline/PL_WS_MDW_ALIGN_SCENARIO_RESUBMISSION_ENQUEUE",
+        "properties" : {
+          "nodeType" : "Pipeline"
+        },
+        "successors" : {
+          "WSDL/MDW_CDM/EnterpriseServices/MDWProject/AlignmentScenarioResubmission/wsdl/WS_MDW_ALIGN_SCENARIO_RESUBMISSION" : {
+            "label" : "WSDL/MDW_CDM/EnterpriseServices/MDWProject/AlignmentScenarioResubmission/wsdl/WS_MDW_ALIGN_SCENARIO_RESUBMISSION",
+            "properties" : {
+              "nodeType" : "WSDL"
+            },
+            "successors" : {
+              "XMLSchema/MDW_CDM/EnterpriseServices/MDWProject/AlignmentScenarioResubmission/xsd/XSD_ALIGN_SCENARIO_RESUBMISSION" : {
+                "label" : "XMLSchema/MDW_CDM/EnterpriseServices/MDWProject/AlignmentScenarioResubmission/xsd/XSD_ALIGN_SCENARIO_RESUBMISSION",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              },
+              "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY" : {
+                "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              }
+            }
+          },
+          "BusinessService/MDWProject/AlignmentScenarioResubmission/businessService/BS_JMS_MDW_ALIGN_SCENARIO_RESUBMISSION_ENQUEUE" : {
+            "label" : "BusinessService/MDWProject/AlignmentScenarioResubmission/businessService/BS_JMS_MDW_ALIGN_SCENARIO_RESUBMISSION_ENQUEUE",
+            "properties" : {
+              "nodeType" : "BusinessService"
+            },
+            "successors" : { }
+          },
+          "PipelineTemplate/MDW_CO/templates/pipeline/PL_WS_GENERIC_OPERATION_ASYNC_ENQUEUE_TEMPLATE" : {
+            "label" : "PipelineTemplate/MDW_CO/templates/pipeline/PL_WS_GENERIC_OPERATION_ASYNC_ENQUEUE_TEMPLATE",
+            "properties" : {
+              "nodeType" : "PipelineTemplate"
+            },
+            "successors" : { }
+          }
+        }
+      },
+      "WSDL/MDW_CDM/EnterpriseServices/MDWProject/AlignmentScenarioResubmission/wsdl/WS_MDW_ALIGN_SCENARIO_RESUBMISSION" : {
+        "label" : "WSDL/MDW_CDM/EnterpriseServices/MDWProject/AlignmentScenarioResubmission/wsdl/WS_MDW_ALIGN_SCENARIO_RESUBMISSION",
+        "properties" : {
+          "nodeType" : "WSDL"
+        },
+        "successors" : {
+          "XMLSchema/MDW_CDM/EnterpriseServices/MDWProject/AlignmentScenarioResubmission/xsd/XSD_ALIGN_SCENARIO_RESUBMISSION" : {
+            "label" : "XMLSchema/MDW_CDM/EnterpriseServices/MDWProject/AlignmentScenarioResubmission/xsd/XSD_ALIGN_SCENARIO_RESUBMISSION",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          },
+          "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY" : {
+            "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          }
+        }
+      }
+    }
+  }
+}

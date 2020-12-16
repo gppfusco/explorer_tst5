@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skytv.it/mdw/data" targetNamespace="http://www.skytv.it/mdw/data" elementFormDefault="qualified">
+    <xsd:element name="requestRetrieveSurveyURL" type="requestRetrieveSurveyURLType"/>
+    <xsd:element name="responseRetrieveSurveyURL" type="responseRetrieveSurveyURLType"/>
+    
+    <xsd:complexType name="requestRetrieveSurveyURLType">
+            <xsd:sequence>
+              <xsd:element name="accountID" type="xsd:string"/>
+              <xsd:element name="accountName" type="xsd:string"/>
+              <xsd:element name="e2eContractId" type="xsd:string"/>
+            </xsd:sequence>
+    </xsd:complexType>
+    
+    
+    <xsd:complexType name="responseRetrieveSurveyURLType">
+            <xsd:sequence>
+              <xsd:element name="resultCode" type="xsd:string"/>
+              <xsd:element name="resultDescription" type="xsd:string"/>
+              <xsd:element name="surveryUrl" type="xsd:string" minOccurs="0"/>
+            </xsd:sequence>
+    </xsd:complexType>
+    
+</xsd:schema>

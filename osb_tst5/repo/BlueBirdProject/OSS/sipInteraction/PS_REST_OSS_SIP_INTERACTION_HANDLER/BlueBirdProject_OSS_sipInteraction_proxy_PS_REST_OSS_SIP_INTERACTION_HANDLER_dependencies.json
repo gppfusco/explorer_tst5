@@ -1,0 +1,158 @@
+{
+  "DefaultNetworkNode" : {
+    "label" : "ProxyService/BlueBirdProject/OSS/sipInteraction/proxy/PS_REST_OSS_SIP_INTERACTION_HANDLER",
+    "properties" : {
+      "transport-type" : "http",
+      "nodeType" : "Proxy",
+      "service-type" : "REST"
+    },
+    "successors" : {
+      "WSDL/BlueBirdProject/Resources/PS_REST_OSS_SIP_INTERACTION_HANDLER" : {
+        "label" : "WSDL/BlueBirdProject/Resources/PS_REST_OSS_SIP_INTERACTION_HANDLER",
+        "properties" : {
+          "nodeType" : "WSDL"
+        },
+        "successors" : {
+          "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors" : {
+            "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          },
+          "XMLSchema/MDW_CDM/EnterpriseServices/BlueBirdProject/OSS/sipInteraction/xsd/XSD_OSS_SIP_INTERACTION" : {
+            "label" : "XMLSchema/MDW_CDM/EnterpriseServices/BlueBirdProject/OSS/sipInteraction/xsd/XSD_OSS_SIP_INTERACTION",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          }
+        }
+      },
+      "Pipeline/BlueBirdProject/OSS/sipInteraction/pipeline/PL_REST_OSS_SIP_INTERACTION_HANDLER" : {
+        "label" : "Pipeline/BlueBirdProject/OSS/sipInteraction/pipeline/PL_REST_OSS_SIP_INTERACTION_HANDLER",
+        "properties" : {
+          "nodeType" : "Pipeline"
+        },
+        "successors" : {
+          "WSDL/BlueBirdProject/Resources/PS_REST_OSS_SIP_INTERACTION_HANDLER" : {
+            "label" : "WSDL/BlueBirdProject/Resources/PS_REST_OSS_SIP_INTERACTION_HANDLER",
+            "properties" : {
+              "nodeType" : "WSDL"
+            },
+            "successors" : {
+              "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors" : {
+                "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              },
+              "XMLSchema/MDW_CDM/EnterpriseServices/BlueBirdProject/OSS/sipInteraction/xsd/XSD_OSS_SIP_INTERACTION" : {
+                "label" : "XMLSchema/MDW_CDM/EnterpriseServices/BlueBirdProject/OSS/sipInteraction/xsd/XSD_OSS_SIP_INTERACTION",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              }
+            }
+          },
+          "Pipeline/BlueBirdProject/OSS/sipInteraction/pipeline/PL_INTERNAL_OSS_RETRIEVE_SIP_CREDENTIALS" : {
+            "label" : "Pipeline/BlueBirdProject/OSS/sipInteraction/pipeline/PL_INTERNAL_OSS_RETRIEVE_SIP_CREDENTIALS",
+            "properties" : {
+              "nodeType" : "Pipeline"
+            },
+            "successors" : {
+              "WSDL/BlueBirdProject/Resources/PS_REST_OSS_SIP_INTERACTION_HANDLER" : {
+                "label" : "WSDL/BlueBirdProject/Resources/PS_REST_OSS_SIP_INTERACTION_HANDLER",
+                "properties" : {
+                  "nodeType" : "WSDL"
+                },
+                "successors" : {
+                  "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors" : {
+                    "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors",
+                    "properties" : {
+                      "nodeType" : "XMLSchema"
+                    },
+                    "successors" : { }
+                  },
+                  "XMLSchema/MDW_CDM/EnterpriseServices/BlueBirdProject/OSS/sipInteraction/xsd/XSD_OSS_SIP_INTERACTION" : {
+                    "label" : "XMLSchema/MDW_CDM/EnterpriseServices/BlueBirdProject/OSS/sipInteraction/xsd/XSD_OSS_SIP_INTERACTION",
+                    "properties" : {
+                      "nodeType" : "XMLSchema"
+                    },
+                    "successors" : { }
+                  }
+                }
+              },
+              "Xquery/BlueBirdProject/OSS/sipInteraction/transformation/createRequest_retrieveSIPCredentials" : {
+                "label" : "Xquery/BlueBirdProject/OSS/sipInteraction/transformation/createRequest_retrieveSIPCredentials",
+                "properties" : {
+                  "nodeType" : "Xquery"
+                },
+                "successors" : { }
+              },
+              "BusinessService/BlueBirdProject/OSS/sipInteraction/businessServices/BS_REST_OSS_RETRIEVE_SIP_CREDENTIALS" : {
+                "label" : "BusinessService/BlueBirdProject/OSS/sipInteraction/businessServices/BS_REST_OSS_RETRIEVE_SIP_CREDENTIALS",
+                "properties" : {
+                  "nodeType" : "BusinessService"
+                },
+                "successors" : {
+                  "WSDL/BlueBirdProject/Resources/BS_REST_OSS_RETRIEVE_SIP_CREDENTIALS" : {
+                    "label" : "WSDL/BlueBirdProject/Resources/BS_REST_OSS_RETRIEVE_SIP_CREDENTIALS",
+                    "properties" : {
+                      "nodeType" : "WSDL"
+                    },
+                    "successors" : { }
+                  },
+                  "WADL/BlueBirdProject/Resources/BS_REST_OSS_RETRIEVE_SIP_CREDENTIALS" : {
+                    "label" : "WADL/BlueBirdProject/Resources/BS_REST_OSS_RETRIEVE_SIP_CREDENTIALS",
+                    "properties" : {
+                      "nodeType" : "WADL"
+                    },
+                    "successors" : { }
+                  },
+                  "ServiceAccount/MDW_CDM/ServiceAccount/SA_OSS_IGW_OLOGW" : {
+                    "label" : "ServiceAccount/MDW_CDM/ServiceAccount/SA_OSS_IGW_OLOGW",
+                    "properties" : {
+                      "nodeType" : "ServiceAccount"
+                    },
+                    "successors" : { }
+                  }
+                }
+              },
+              "PipelineTemplate/MDW_CO/templates/pipeline/PL_INTERNAL_GENERIC_OPERATION_TEMPLATE" : {
+                "label" : "PipelineTemplate/MDW_CO/templates/pipeline/PL_INTERNAL_GENERIC_OPERATION_TEMPLATE",
+                "properties" : {
+                  "nodeType" : "PipelineTemplate"
+                },
+                "successors" : { }
+              },
+              "Xquery/BlueBirdProject/OSS/sipInteraction/transformation/createResponse_retrieveSIPCredentials" : {
+                "label" : "Xquery/BlueBirdProject/OSS/sipInteraction/transformation/createResponse_retrieveSIPCredentials",
+                "properties" : {
+                  "nodeType" : "Xquery"
+                },
+                "successors" : { }
+              }
+            }
+          },
+          "PipelineTemplate/MDW_CO/templates/pipeline/PL_WS_SERVICE_ROUTING_TEMPLATE_VALIDATION_WITHOUT_BRANCH" : {
+            "label" : "PipelineTemplate/MDW_CO/templates/pipeline/PL_WS_SERVICE_ROUTING_TEMPLATE_VALIDATION_WITHOUT_BRANCH",
+            "properties" : {
+              "nodeType" : "PipelineTemplate"
+            },
+            "successors" : { }
+          }
+        }
+      },
+      "WADL/BlueBirdProject/Resources/PS_REST_OSS_SIP_INTERACTION_HANDLER" : {
+        "label" : "WADL/BlueBirdProject/Resources/PS_REST_OSS_SIP_INTERACTION_HANDLER",
+        "properties" : {
+          "nodeType" : "WADL"
+        },
+        "successors" : { }
+      }
+    }
+  }
+}

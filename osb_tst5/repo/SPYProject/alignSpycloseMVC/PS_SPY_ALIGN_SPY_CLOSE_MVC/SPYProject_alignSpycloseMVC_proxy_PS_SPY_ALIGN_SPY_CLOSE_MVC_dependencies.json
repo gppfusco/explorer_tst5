@@ -1,0 +1,137 @@
+{
+  "DefaultNetworkNode" : {
+    "label" : "ProxyService/SPYProject/alignSpycloseMVC/proxy/PS_SPY_ALIGN_SPY_CLOSE_MVC",
+    "properties" : {
+      "transport-type" : "http",
+      "nodeType" : "Proxy",
+      "service-type" : "SOAP"
+    },
+    "successors" : {
+      "Pipeline/SPYProject/alignSpycloseMVC/pipeline/PL_SPY_ALIGN_SPY_CLOSE_MVC" : {
+        "label" : "Pipeline/SPYProject/alignSpycloseMVC/pipeline/PL_SPY_ALIGN_SPY_CLOSE_MVC",
+        "properties" : {
+          "nodeType" : "Pipeline"
+        },
+        "successors" : {
+          "WSDL/MDW_CDM/EnterpriseServices/SPYProject/alignSpyCloseMVC/wsdl/WS_SPY_ALIGN_SPY_CLOSE_MVC" : {
+            "label" : "WSDL/MDW_CDM/EnterpriseServices/SPYProject/alignSpyCloseMVC/wsdl/WS_SPY_ALIGN_SPY_CLOSE_MVC",
+            "properties" : {
+              "nodeType" : "WSDL"
+            },
+            "successors" : {
+              "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY" : {
+                "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              },
+              "XMLSchema/MDW_CDM/EnterpriseServices/SPYProject/alignSpyCloseMVC/xsd/XSD_SPY_ALIGN_SPY_CLOSE_MVC" : {
+                "label" : "XMLSchema/MDW_CDM/EnterpriseServices/SPYProject/alignSpyCloseMVC/xsd/XSD_SPY_ALIGN_SPY_CLOSE_MVC",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              }
+            }
+          },
+          "Pipeline/SPYProject/alignSpycloseMVC/pipeline/PL_INTERNAL_SPY_ALIGN_SPY_CLOSE_MVC" : {
+            "label" : "Pipeline/SPYProject/alignSpycloseMVC/pipeline/PL_INTERNAL_SPY_ALIGN_SPY_CLOSE_MVC",
+            "properties" : {
+              "nodeType" : "Pipeline"
+            },
+            "successors" : {
+              "BusinessService/SPYProject/alignSpycloseMVC/businessServices/BS_SPY_ALIGN_SPY_CLOSE_MVC" : {
+                "label" : "BusinessService/SPYProject/alignSpycloseMVC/businessServices/BS_SPY_ALIGN_SPY_CLOSE_MVC",
+                "properties" : {
+                  "nodeType" : "BusinessService"
+                },
+                "successors" : {
+                  "WSDL/MDW_CDM/ApplicationObjects/SPY/alignSpyCloseMVC/SpyMultivision" : {
+                    "label" : "WSDL/MDW_CDM/ApplicationObjects/SPY/alignSpyCloseMVC/SpyMultivision",
+                    "properties" : {
+                      "nodeType" : "WSDL"
+                    },
+                    "successors" : { }
+                  }
+                }
+              },
+              "Xquery/SPYProject/alignSpycloseMVC/trasformation/createRequest_AlignSpyCloseMvc" : {
+                "label" : "Xquery/SPYProject/alignSpycloseMVC/trasformation/createRequest_AlignSpyCloseMvc",
+                "properties" : {
+                  "nodeType" : "Xquery"
+                },
+                "successors" : { }
+              },
+              "WSDL/MDW_CDM/EnterpriseServices/SPYProject/alignSpyCloseMVC/wsdl/WS_SPY_ALIGN_SPY_CLOSE_MVC" : {
+                "label" : "WSDL/MDW_CDM/EnterpriseServices/SPYProject/alignSpyCloseMVC/wsdl/WS_SPY_ALIGN_SPY_CLOSE_MVC",
+                "properties" : {
+                  "nodeType" : "WSDL"
+                },
+                "successors" : {
+                  "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY" : {
+                    "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+                    "properties" : {
+                      "nodeType" : "XMLSchema"
+                    },
+                    "successors" : { }
+                  },
+                  "XMLSchema/MDW_CDM/EnterpriseServices/SPYProject/alignSpyCloseMVC/xsd/XSD_SPY_ALIGN_SPY_CLOSE_MVC" : {
+                    "label" : "XMLSchema/MDW_CDM/EnterpriseServices/SPYProject/alignSpyCloseMVC/xsd/XSD_SPY_ALIGN_SPY_CLOSE_MVC",
+                    "properties" : {
+                      "nodeType" : "XMLSchema"
+                    },
+                    "successors" : { }
+                  }
+                }
+              },
+              "Xquery/SPYProject/alignSpycloseMVC/trasformation/createResponse_AlignSpyCloseMVC" : {
+                "label" : "Xquery/SPYProject/alignSpycloseMVC/trasformation/createResponse_AlignSpyCloseMVC",
+                "properties" : {
+                  "nodeType" : "Xquery"
+                },
+                "successors" : { }
+              },
+              "PipelineTemplate/MDW_CO/templates/pipeline/PL_INTERNAL_GENERIC_OPERATION_TEMPLATE" : {
+                "label" : "PipelineTemplate/MDW_CO/templates/pipeline/PL_INTERNAL_GENERIC_OPERATION_TEMPLATE",
+                "properties" : {
+                  "nodeType" : "PipelineTemplate"
+                },
+                "successors" : { }
+              }
+            }
+          },
+          "PipelineTemplate/MDW_CO/templates/pipeline/PL_WS_SERVICE_ROUTING_TEMPLATE_VALIDATION_WITHOUT_BRANCH" : {
+            "label" : "PipelineTemplate/MDW_CO/templates/pipeline/PL_WS_SERVICE_ROUTING_TEMPLATE_VALIDATION_WITHOUT_BRANCH",
+            "properties" : {
+              "nodeType" : "PipelineTemplate"
+            },
+            "successors" : { }
+          }
+        }
+      },
+      "WSDL/MDW_CDM/EnterpriseServices/SPYProject/alignSpyCloseMVC/wsdl/WS_SPY_ALIGN_SPY_CLOSE_MVC" : {
+        "label" : "WSDL/MDW_CDM/EnterpriseServices/SPYProject/alignSpyCloseMVC/wsdl/WS_SPY_ALIGN_SPY_CLOSE_MVC",
+        "properties" : {
+          "nodeType" : "WSDL"
+        },
+        "successors" : {
+          "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY" : {
+            "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          },
+          "XMLSchema/MDW_CDM/EnterpriseServices/SPYProject/alignSpyCloseMVC/xsd/XSD_SPY_ALIGN_SPY_CLOSE_MVC" : {
+            "label" : "XMLSchema/MDW_CDM/EnterpriseServices/SPYProject/alignSpyCloseMVC/xsd/XSD_SPY_ALIGN_SPY_CLOSE_MVC",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          }
+        }
+      }
+    }
+  }
+}

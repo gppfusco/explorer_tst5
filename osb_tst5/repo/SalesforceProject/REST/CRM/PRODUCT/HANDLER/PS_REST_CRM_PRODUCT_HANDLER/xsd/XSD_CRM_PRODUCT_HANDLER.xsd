@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skytv.it/mdw/data"
+            targetNamespace="http://www.skytv.it/mdw/data" elementFormDefault="qualified">
+  <xsd:element name="requestGetCompatibleProd" type="requestGetCompatibleProdType"/>
+  <xsd:complexType name="requestGetCompatibleProdType">
+    <xsd:sequence>
+      <xsd:element name="productCode" type="xsd:string"/>
+      <xsd:element name="contrId" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="responseGetCompatibleProd" type="responseGetCompatibleProdType"/>
+  <xsd:complexType name="responseGetCompatibleProdType" >
+    <xsd:sequence>
+      <xsd:element name="mdwResultCode" type="xsd:string"/>
+      <xsd:element name="mdwResultDescription" type="xsd:string"/>
+      <xsd:element name="mdwProducts">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="mdwProduct" type="xsd:string"/>
+            <xsd:element name="productCode" type="xsd:string"/>
+            <xsd:element name="mdwAction" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

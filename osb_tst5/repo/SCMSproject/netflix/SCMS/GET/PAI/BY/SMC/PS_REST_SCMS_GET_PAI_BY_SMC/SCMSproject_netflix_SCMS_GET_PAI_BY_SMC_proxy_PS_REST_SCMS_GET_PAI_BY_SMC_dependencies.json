@@ -1,0 +1,85 @@
+{
+  "DefaultNetworkNode" : {
+    "label" : "ProxyService/SCMSproject/netflix/SCMS_GET_PAI_BY_SMC/proxy/PS_REST_SCMS_GET_PAI_BY_SMC",
+    "properties" : {
+      "transport-type" : "http",
+      "nodeType" : "Proxy",
+      "service-type" : "REST"
+    },
+    "successors" : {
+      "WSDL/SCMSproject/Resources/PS_REST_SCMS_GET_PAI_BY_SMC" : {
+        "label" : "WSDL/SCMSproject/Resources/PS_REST_SCMS_GET_PAI_BY_SMC",
+        "properties" : {
+          "nodeType" : "WSDL"
+        },
+        "successors" : {
+          "XMLSchema/MDW_CDM/EnterpriseServices/SCMSproject/netflix/Rest_GetPaiBySMC/xsd/XSD_SCMS_NETFLIX_GET_PAI_SMC" : {
+            "label" : "XMLSchema/MDW_CDM/EnterpriseServices/SCMSproject/netflix/Rest_GetPaiBySMC/xsd/XSD_SCMS_NETFLIX_GET_PAI_SMC",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          },
+          "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors" : {
+            "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          }
+        }
+      },
+      "WADL/SCMSproject/Resources/PS_REST_SCMS_GET_PAI_BY_SMC" : {
+        "label" : "WADL/SCMSproject/Resources/PS_REST_SCMS_GET_PAI_BY_SMC",
+        "properties" : {
+          "nodeType" : "WADL"
+        },
+        "successors" : { }
+      },
+      "Pipeline/SCMSproject/netflix/SCMS_GET_PAI_BY_SMC/pipeline/PL_REST_SCMS_GET_PAI_BY_SMC" : {
+        "label" : "Pipeline/SCMSproject/netflix/SCMS_GET_PAI_BY_SMC/pipeline/PL_REST_SCMS_GET_PAI_BY_SMC",
+        "properties" : {
+          "nodeType" : "Pipeline"
+        },
+        "successors" : {
+          "PipelineTemplate/MDW_CO/templates/pipeline/PL_WS_SERVICE_ROUTING_TEMPLATE_VALIDATION" : {
+            "label" : "PipelineTemplate/MDW_CO/templates/pipeline/PL_WS_SERVICE_ROUTING_TEMPLATE_VALIDATION",
+            "properties" : {
+              "nodeType" : "PipelineTemplate"
+            },
+            "successors" : { }
+          },
+          "WSDL/SCMSproject/Resources/PS_REST_SCMS_GET_PAI_BY_SMC" : {
+            "label" : "WSDL/SCMSproject/Resources/PS_REST_SCMS_GET_PAI_BY_SMC",
+            "properties" : {
+              "nodeType" : "WSDL"
+            },
+            "successors" : {
+              "XMLSchema/MDW_CDM/EnterpriseServices/SCMSproject/netflix/Rest_GetPaiBySMC/xsd/XSD_SCMS_NETFLIX_GET_PAI_SMC" : {
+                "label" : "XMLSchema/MDW_CDM/EnterpriseServices/SCMSproject/netflix/Rest_GetPaiBySMC/xsd/XSD_SCMS_NETFLIX_GET_PAI_SMC",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              },
+              "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors" : {
+                "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/restErrors",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              }
+            }
+          },
+          "Pipeline/SCMSproject/netflix/SCMS_GET_PAI_BY_SMC/pipeline/PL_STUB" : {
+            "label" : "Pipeline/SCMSproject/netflix/SCMS_GET_PAI_BY_SMC/pipeline/PL_STUB",
+            "properties" : {
+              "nodeType" : "Pipeline"
+            },
+            "successors" : { }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skytv.it/mdw/data"
+            targetNamespace="http://www.skytv.it/mdw/data" elementFormDefault="qualified">
+  
+   <xsd:complexType name="requestUpgradeNetflixType"> 
+    <xsd:sequence>
+     
+     <xsd:element name="actionCode">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="NETER"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+     </xsd:element>
+     <xsd:element name="contactId" type="xsd:string" /> 
+     
+      <xsd:element name="flagSync" minOccurs="0">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="Y"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+     </xsd:element>
+    
+     <xsd:element name="clientId" minOccurs="0">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="SKY"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+     </xsd:element>
+     
+    <xsd:element name="operator" minOccurs="0">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value = "25"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:element>
+    
+    <xsd:element name="executionDate" type="xsd:dateTime" minOccurs="0"/>
+    
+    <xsd:element name="priority" type="xsd:dateTime" minOccurs="0"/>
+    
+     <xsd:element name="typeSrvReq" minOccurs="0">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="S"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+     </xsd:element>
+    
+    <xsd:element name="contractId">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value = "20"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:element>
+    
+    <xsd:element name="netflixPack">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="Standard"/>
+          <xsd:enumeration value="Premium"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+     </xsd:element>
+    
+    </xsd:sequence>
+   </xsd:complexType>
+   
+   <xsd:complexType name="requestDowngradeNetflixType"> 
+    <xsd:sequence>
+     
+     <xsd:element name="actionCode">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="NETCLR"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+     </xsd:element>
+     
+      <xsd:element name="flagSync" minOccurs="0">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="Y"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+     </xsd:element>
+    
+     <xsd:element name="clientId" minOccurs="0">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="SKY"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+     </xsd:element>
+     
+    <xsd:element name="operator" minOccurs="0">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value = "25"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:element>
+    
+    <xsd:element name="executionDate" type="xsd:dateTime" minOccurs="0"/>
+    
+    <xsd:element name="priority" type="xsd:dateTime" minOccurs="0"/>
+    
+     <xsd:element name="typeSrvReq" minOccurs="0">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="S"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+     </xsd:element>
+    
+    <xsd:element name="contractId">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value = "20"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:element>
+    
+    
+    </xsd:sequence>
+   </xsd:complexType>
+   
+   <xsd:complexType name="responseNetflixType">
+    <xsd:sequence>
+      <xsd:element name="resultCode"/>
+      <xsd:element name="resultDescription"/>
+      <xsd:element name="trasnid" minOccurs="0"/>
+    </xsd:sequence> 
+   </xsd:complexType>
+   
+   <xsd:element name="requestUpgradeNetflix" type="requestUpgradeNetflixType" />
+   <xsd:element name="requestDowngradeNetflix" type="requestDowngradeNetflixType" />
+   <xsd:element name="responseUpgradeNetflix" type="responseNetflixType" />
+   <xsd:element name="responseDowngradeNetflix" type="responseNetflixType" />
+    
+</xsd:schema>

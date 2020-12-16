@@ -1,0 +1,107 @@
+{
+  "DefaultNetworkNode" : {
+    "label" : "ProxyService/KENANProject/WS_KNN_LETTERA_PO/proxy/PS_WS_KNN_LETTERA_PO",
+    "properties" : {
+      "transport-type" : "http",
+      "nodeType" : "Proxy",
+      "service-type" : "SOAP"
+    },
+    "successors" : {
+      "WSDL/MDW_CDM/EnterpriseServices/KenanProject/LetteraPO/wsdl/WS_KNN_LETTERA_PO" : {
+        "label" : "WSDL/MDW_CDM/EnterpriseServices/KenanProject/LetteraPO/wsdl/WS_KNN_LETTERA_PO",
+        "properties" : {
+          "nodeType" : "WSDL"
+        },
+        "successors" : {
+          "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY" : {
+            "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          },
+          "XMLSchema/MDW_CDM/EnterpriseServices/KenanProject/LetteraPO/xsd/XSD_KNN_LETTERA_PO" : {
+            "label" : "XMLSchema/MDW_CDM/EnterpriseServices/KenanProject/LetteraPO/xsd/XSD_KNN_LETTERA_PO",
+            "properties" : {
+              "nodeType" : "XMLSchema"
+            },
+            "successors" : { }
+          }
+        }
+      },
+      "Pipeline/KENANProject/WS_KNN_LETTERA_PO/pipeline/PL_WS_KNN_LETTERA_PO" : {
+        "label" : "Pipeline/KENANProject/WS_KNN_LETTERA_PO/pipeline/PL_WS_KNN_LETTERA_PO",
+        "properties" : {
+          "nodeType" : "Pipeline"
+        },
+        "successors" : {
+          "BusinessService/KENANProject/WS_KNN_LETTERA_PO/businessService/BS_TUX_LETTERA_PO" : {
+            "label" : "BusinessService/KENANProject/WS_KNN_LETTERA_PO/businessService/BS_TUX_LETTERA_PO",
+            "properties" : {
+              "nodeType" : "BusinessService"
+            },
+            "successors" : {
+              "XMLSchema/MDW_CDM/ApplicationObjects/KENAN/tuxedo_mdw/XSD_TUX_LETTERA_PO" : {
+                "label" : "XMLSchema/MDW_CDM/ApplicationObjects/KENAN/tuxedo_mdw/XSD_TUX_LETTERA_PO",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              },
+              "Archive/MDW_CO/libs/FML/sky_wls_commons/1/0/0" : {
+                "label" : "Archive/MDW_CO/libs/FML/sky_wls_commons/1/0/0",
+                "properties" : {
+                  "nodeType" : "Archive"
+                },
+                "successors" : { }
+              }
+            }
+          },
+          "WSDL/MDW_CDM/EnterpriseServices/KenanProject/LetteraPO/wsdl/WS_KNN_LETTERA_PO" : {
+            "label" : "WSDL/MDW_CDM/EnterpriseServices/KenanProject/LetteraPO/wsdl/WS_KNN_LETTERA_PO",
+            "properties" : {
+              "nodeType" : "WSDL"
+            },
+            "successors" : {
+              "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY" : {
+                "label" : "XMLSchema/MDW_CDM/EnterpriseObjects/CommonEntities/SoapHeaderSKY",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              },
+              "XMLSchema/MDW_CDM/EnterpriseServices/KenanProject/LetteraPO/xsd/XSD_KNN_LETTERA_PO" : {
+                "label" : "XMLSchema/MDW_CDM/EnterpriseServices/KenanProject/LetteraPO/xsd/XSD_KNN_LETTERA_PO",
+                "properties" : {
+                  "nodeType" : "XMLSchema"
+                },
+                "successors" : { }
+              }
+            }
+          },
+          "PipelineTemplate/MDW_CO/templates/pipeline/PL_WS_GENERIC_OPERATION_TEMPLATE" : {
+            "label" : "PipelineTemplate/MDW_CO/templates/pipeline/PL_WS_GENERIC_OPERATION_TEMPLATE",
+            "properties" : {
+              "nodeType" : "PipelineTemplate"
+            },
+            "successors" : { }
+          },
+          "Xquery/KENANProject/WS_KNN_LETTERA_PO/transformation/createResponse_WS_KNN_LETTERA_PO" : {
+            "label" : "Xquery/KENANProject/WS_KNN_LETTERA_PO/transformation/createResponse_WS_KNN_LETTERA_PO",
+            "properties" : {
+              "nodeType" : "Xquery"
+            },
+            "successors" : { }
+          },
+          "Xquery/KENANProject/WS_KNN_LETTERA_PO/transformation/createRequest_BS_TUX_LETTERA_PO" : {
+            "label" : "Xquery/KENANProject/WS_KNN_LETTERA_PO/transformation/createRequest_BS_TUX_LETTERA_PO",
+            "properties" : {
+              "nodeType" : "Xquery"
+            },
+            "successors" : { }
+          }
+        }
+      }
+    }
+  }
+}
